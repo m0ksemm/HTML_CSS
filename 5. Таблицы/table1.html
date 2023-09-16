@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Управление размерами</title>
+    <style>
+        table {
+            
+            border: 2px solid black;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            text-align: center;
+            font-size: large;
+            font-weight: bold;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            height: 20px;
+            border: 2px solid black;
+            margin: 0;
+            padding: 2px;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        <h3>Example 1:</h3>
+        <img src="./table1.gif" style="border: 3px solid rgb(6, 96, 54); padding: 4px;">
+    </p>
+    <table style="width: 500px;">
+        <caption style="font-weight: bold;">Table1</caption>
+        <tbody>
+            <tr>
+                <td colspan="3"> 1 </td>
+            </tr>
+            <tr>
+                <td> 2 </td>
+                <td colspan="2"> 3 </td>
+            </tr>
+            <tr>
+                <td rowspan="2">4</td>
+                <td> 5 </td>
+                <td> 6 </td>
+            </tr>
+            <tr>
+                <td> 7 </td>
+                <td> 8 </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <hr style="margin-top: 60px; margin-bottom: 60px; border-top: 3px solid black;"> 
+
+    <p>
+        <h3>Example 2:</h3>
+        <img src="./table2.gif" style="border: 3px solid rgb(6, 96, 54); padding: 4px;">
+    </p>
+    <table style="width: 900px;">
+        <tbody>
+            <caption style="font-weight: bold;">Table2</caption>
+            <tr>
+                <td rowspan="3" style="width: 150px;">1</td>
+                <td colspan="2">2</td>
+                <td colspan="2" style="width: 100px;">3</td>
+            </tr>
+            <tr>
+                <td style="width: 150px;">4</td>
+                <td style="width: 150px;">5</td>
+                <td style="width: 150px;">6</td>
+                <td style="width: 150px;">7</td>
+            </tr>
+            <tr>
+                <td colspan="4">8</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>10</td>
+                <td rowspan="2">11</td>
+                <td  rowspan="4" colspan="2">12</td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td rowspan="2">14</td>
+                
+            </tr>
+            <tr>
+                <td></td>
+                <td>15</td>
+            </tr>
+            <tr>
+                <td>16</td>
+                <td>17</td>
+                <td>18</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr style="margin-top: 60px;  border-top: 3px solid black;"> 
+
+</body>
+</html>
+
+
