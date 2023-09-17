@@ -1,0 +1,131 @@
+body {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 5px;
+}
+#header {
+    border: 2px solid #336699;
+    padding-top: 2px;
+    min-width: 700px;
+}
+#menu1 {
+    float: right;
+    margin-top: 20px;
+}
+#menu1 a {
+    margin-left: 5px;
+    margin-right: 5px; 
+}
+a {
+    color: #999966;
+    text-decoration: none;
+}
+a:hover {
+    color: #003366;
+    font-weight: bold;
+}
+#sidebar {
+    margin-top: 10px;
+    border: 2px solid #336699;
+    float: left;
+    text-align: left;
+}
+.option1 {
+    padding-top: 10px;
+    padding-left: 5px;
+    padding-bottom: 5px;
+    color: #999966;
+}
+.optionx{
+    padding: 5px;
+    color: #999966;
+}
+.optionlast{
+    padding: 5px;
+    margin-top: 5px;
+    color: #999966;
+    padding-bottom: 10px;
+}
+.option1:hover {
+    background-color: aliceblue;
+    border-bottom: 2px solid #336699;
+    color: #003366;
+    font-weight: bold;
+}
+.optionx:hover {
+    background-color: aliceblue;
+    border-bottom: 2px solid #336699;
+    border-top: 2px solid #336699;
+    font-weight: bold;
+}
+.optionlast:hover {
+    background-color: aliceblue;
+    border-top: 2px solid #336699;
+    font-weight: bold;
+}
+#chapter1 {
+    padding: 5px;
+    border-bottom: 2px solid #336699;
+    color: #003366;
+    font-weight: bold;
+}
+#chapter2 {
+    padding: 5px;
+    border-bottom: 2px solid #336699;
+    border-top: 2px solid #336699;
+    color: #003366;
+    font-weight: bold;
+}
+.main {
+    min-height: 265px;
+    margin-bottom: 5px;
+}
+#photo1{
+    margin-top: 5px;
+    background-color: #003366;
+    float: right;
+    width: 200px;
+    height: 200px;
+    margin-left: 10px;
+    margin-right: 5px;
+}
+#content1{            
+    margin-left: 10px;
+    margin-right: 210px;
+    margin-top: 5px;
+}
+#photo2{
+    margin-top: 5px;
+    float: left;
+    width: 300px;
+    margin-left: 10px;
+}
+
+#content2{
+    margin-top: 5px;
+    margin-left: 320px;
+    margin-right: 10px;
+}
+h4 {
+    background-color: #336699;
+    color: white;
+    padding-left: 10px;
+    margin-top: 1px;
+}
+#content_window {
+    min-width: 504px;
+    margin-right: 100px;      
+    margin-left: 200px; 
+    margin-top: 10px;
+}
+span {
+    color: #003366;
+    font-weight: bold;
+}
+ul {
+    list-style-image:url(./img/arrow.gif);
+    color: #990000;
+    margin-left: -25px;
+}
+.content_img {
+    width: 100%;
+}
