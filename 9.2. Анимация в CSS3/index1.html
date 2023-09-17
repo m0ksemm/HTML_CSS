@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Animation CSS3</title>
+    <style>
+       
+        .rotating-hr1 {
+            width: 150px;
+            border: none;
+            border-top: 2px solid black;
+            animation: rotate 10s linear infinite;
+            transform-origin: 0% 50%;
+        }
+        .rotating-hr2 {
+            width: 150px;
+            border: none;
+            border-top: 2px solid black;
+            animation: rotate 30s linear infinite;
+            transform-origin: 0% 50%;
+        }
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        #outside {
+            border: 3px solid green; 
+            border-radius: 180px; 
+            width: 330px; height: 
+            330px; 
+            padding: 10px;
+        }
+        #inner {
+            border: 6px dotted green; 
+            border-radius: 150px; 
+            width: 300px; 
+            height: 300px; 
+            margin-top: 10px; 
+            margin-left: 10px;
+        }
+        #arrow1 {
+            border: 2px solid green; 
+            height: 1px; 
+            background-color: green; 
+            width: 135px; 
+            margin-top: 150px; 
+            margin-left: 150px;
+        }
+        #arrow2 {
+            border: 2px solid green; 
+            height: 1px; 
+            background-color: green; 
+            width: 100px; 
+            margin-top: -18px; 
+            margin-left: 150px;
+        }
+        #center {
+            border: 6px solid green; 
+            border-radius: 5px;  
+            height: 1px; 
+            background-color: green; 
+            width: 1px; 
+            margin-top: -15px; 
+            margin-left: 145px;
+        }
+    </style>
+</head>
+<body>
+    <div id="outside">
+        <div id="inner">
+            <hr id="arrow1" class="rotating-hr1">
+            <hr id="arrow2" class="rotating-hr2">
+            <div id="center"></div>
+        </div>
+    </div>
+</body>
+</html>
