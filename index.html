@@ -11,7 +11,6 @@
         }
         #main {
             display: flex;
-            height: 800px
         }
         #bodyItem1 {
             flex-grow: 0;
@@ -175,10 +174,11 @@
             height: 100%;
         }
         .lableType3 {
+            text-wrap: wrap;
             margin-top: 10px;
         }
         .lableType4 {
-            text-wrap: nowrap;
+            text-wrap: wrap;
             font-size: 0.8em;
             padding-bottom: 10px;
             border-bottom: 2px solid gray;
@@ -253,6 +253,183 @@
         .last a {
             margin-right: 10px;
         }
+        #stats {
+            color: white;
+            flex-direction: column;
+            display: flex;
+            padding: 10px;
+            margin-top: -15px ;
+            flex-grow: 0;
+        }
+        .lableType5{
+            text-wrap: nowrap;
+            font-size: 0.8em;
+        }
+        .employeesTable {
+            border: 1px s;
+        }
+        table {
+            font-size: 0.8em;
+            width: 100%;
+            text-align: left;
+            border-collapse:collapse;
+            margin-top: 10px;
+        }
+         td {
+            border-top: 2px solid gray;
+            margin: 0;
+            padding: 3px;
+        }
+        th {
+            color:#60a0a0;
+        }
+        #footer {
+            height: fit-content;
+            flex-shrink: 1;
+            margin-left: 15px;
+            margin-right: 15px;
+            margin-top: 15px;
+            display: flex;
+            padding: 5px;
+            border-top: 2px solid gray;
+        }
+        #footer .footerItemType1 a {
+            text-decoration: none;
+            color:black;
+        }
+        .footerItemType1 {
+            align-self: center;
+            padding: 5px;
+            font-weight: bold;
+            margin-right: 30px;
+        }
+        .footerItemType2 {
+            align-self: center;
+            padding: 5px;
+            font-size: 1.2em;
+        }
+        .footerItemType1:hover {
+            border-top: 1px solid lightblue;
+            border-radius: 3px;
+            background-color: lightblue;
+            color: white
+        }
+        .rows {
+            display: none;
+        }
+        @media (min-width:800px) and (max-width:1000px){
+            #container1 {
+                flex-wrap: wrap;
+            }
+            .container1item {
+                min-width: 230px;
+            }
+            #container3 {
+                flex-direction: column;
+            }
+            #cont3itm2 {
+                margin-top: 40px;
+            }
+            #cont1itm3 {
+                margin-top: 25px;
+            }
+            #cont1itm4 {
+                margin-top: 25px;
+            }
+        }
+        @media (min-width:650px) and (max-width:800px){
+            #container1 {
+                flex-wrap: wrap;
+            }
+            .container1item {
+                min-width: 230px;
+            }
+            #container3 {
+                flex-direction: column;
+            }
+            #cont3itm2 {
+                margin-top: 40px;
+            }
+            #cont1itm3 {
+                margin-top: 25px;
+            }
+            #cont1itm4 {
+                margin-top: 25px;
+            }
+            #bodyItem1 {
+                display: none;
+            }
+        }
+        @media (min-width:500px) and (max-width:650px){
+            #bodyItem1 {
+                display: none;
+            }
+            #container1 {
+                flex-wrap: wrap;
+            }
+            .container1item {
+                min-width: 170px;
+            }
+            #container2 {
+                flex-direction: column;
+            }
+            #container3 {
+                flex-direction: column;
+            }
+            #cont3itm2 {
+                margin-top: 40px;
+            }
+            #cont1itm3 {
+                margin-top: 25px;
+            }
+            #cont1itm4 {
+                margin-top: 25px;
+            }
+            #cont2itm2 {
+                margin-top: 40px;
+            }
+            #cont2itm3 {
+                margin-top: 40px;
+            }
+        }
+        @media (max-width:500px){
+            #bodyItem1 {
+                display: none;
+            }
+            #container1 {
+                flex-direction: column;
+            }
+            #container2 {
+                flex-direction: column;
+            }
+            #container3 {
+                flex-direction: column;
+            }
+            #cont3itm2 {
+                margin-top: 40px;
+            }
+            #cont1itm2 {
+                margin-top: 25px;
+            }
+            #cont1itm3 {
+                margin-top: 25px;
+            }
+            #cont1itm4 {
+                margin-top: 25px;
+            }
+            #cont2itm2 {
+                margin-top: 40px;
+            }
+            #cont2itm3 {
+                margin-top: 40px;
+            }
+            .footerItemType1 {
+                font-size: 0.7em;
+            }
+            .footerItemType2 {
+                font-size: 0.7em;
+            }
+        }
     </style>
 </head>
 <body>
@@ -289,37 +466,39 @@
                 Dashboard
             </div>
             <div id="container1">
-                <div class="container1item">
-                    <div class="topDiv">
-                        <div class="container1picture setGreen">
-                            <img src="./icons_exam_task1/data_white.svg">
+                <div class="container1item" id="cont1itm1">
+                    
+                        <div class="topDiv">
+                            <div class="container1picture setGreen">
+                                <img src="./icons_exam_task1/data_white.svg">
+                            </div>
+                            <div class="lableContainer">
+                                <div class="lableType1">Used Space</div>
+                                <div class="lableType2">49/50 GB</div>
+                            </div>
                         </div>
-                        <div class="lableContainer">
-                            <div class="lableType1">Used Space</div>
-                            <div class="lableType2">49/50 GB</div>
+                        <div class="bottomDiv">
+                            <img src="./icons_exam_task1/alert.png" class="smallPicture" alt="Calendar">
+                            Get more space...
                         </div>
+                        </div>
+            <div class="container1item" id="cont1itm2">
+                <div class="topDiv">
+                    <div class="container1picture setYellow">
+                        <img src="./icons_exam_task1/shop_white.svg">
                     </div>
-                    <div class="bottomDiv">
-                        <img src="./icons_exam_task1/alert.png" class="smallPicture" alt="Calendar">
-                        Get more space...
-                    </div>
-                </div>
-                <div class="container1item">
-                    <div class="topDiv">
-                        <div class="container1picture setYellow">
-                            <img src="./icons_exam_task1/shop_white.svg">
-                        </div>
-                        <div class="lableContainer">
-                            <div class="lableType1">Revenue</div>
-                            <div class="lableType2">$ 34.245</div>
-                        </div>
-                    </div>
-                    <div class="bottomDiv">
-                        <img src="./icons_exam_task1/calendar.png" class="smallPicture" alt="down">
-                        Last 24 Hours
+                    <div class="lableContainer">
+                        <div class="lableType1">Revenue</div>
+                        <div class="lableType2">$ 34.245</div>
                     </div>
                 </div>
-                <div class="container1item">
+                <div class="bottomDiv">
+                    <img src="./icons_exam_task1/calendar.png" class="smallPicture" alt="down">
+                    Last 24 Hours
+                </div>
+            </div>
+                    
+                <div class="container1item" id="cont1itm3">
                     <div class="topDiv">
                         <div class="container1picture setBlue">
                             <img src="./icons_exam_task1/tag_white.svg">
@@ -334,7 +513,7 @@
                         Tracked form Github
                     </div>
                 </div>
-                <div class="container1item">
+                <div class="container1item" id="cont1itm4">
                     <div class="topDiv">
                         <div class="container1picture setRed">
                             <img src="./icons_exam_task1/paperplane_white.svg">
@@ -351,7 +530,7 @@
                 </div>
             </div>
             <div id="container2">
-                <div class="container2item">
+                <div class="container2item" id="cont2itm1">
                     <div class="columnDiv">
                         <div class="container2picture setGreen">
                             <img src="./icons_exam_task1/graphics.svg" class="diagramPicture">
@@ -366,7 +545,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="container2item">
+                <div class="container2item" id="cont2itm2">
                     <div class="columnDiv">
                         <div class="container2picture setYellow">
                             <img src="./icons_exam_task1/graphics.svg" class="diagramPicture">
@@ -381,7 +560,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="container2item">
+                <div class="container2item" id="cont2itm3">
                     <div class="columnDiv">
                         <div class="container2picture setBlue">
                             <img src="./icons_exam_task1/graphics.svg" class="diagramPicture">
@@ -398,7 +577,7 @@
                 </div>
             </div>
             <div id="container3">
-                <div class="container3item">
+                <div class="container3item" id="cont3itm1">
                     <div class="columnDiv">
                         <div class="container2picture setYellow">
                             <div class="optionLabel">
@@ -484,9 +663,68 @@
                         
                     </div>
                 </div>
-                <div class="container3item">
-                    w
+                <div class="container3item" id="cont3itm2">
+                    <div id="stats" class="setBlue">
+                        <div>Employees Stats</div>
+                        <div class="lableType5 ">New employees on 19th September, 2019</div>
+                    </div>
+                    <div>
+                        <table>
+                            <thead>	 
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Name</th>
+                                    <th>Salary</th>
+                                    <th>Country</th>
+                                </tr>		
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Luka Rice</td>
+                                    <td>$1212.763</td>
+                                    <td>Poland</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Mike Norland</td>
+                                    <td>$2201.162</td>
+                                    <td>England</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Hans Eidens</td>
+                                    <td>$1931.717</td>
+                                    <td>Germany</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>Mario Musali</td>
+                                    <td>$1031.731</td>
+                                    <td>Italy</td>
+                                </tr>				
+                            </tbody>	
+                        </table>
+                    </div>
                 </div>
+            </div>
+            <div id="footer">
+                <div class="footerItemType1">
+                    <a href="#">
+                        ABOUT
+                    </a>
+                </div>
+                <div class="footerItemType1">
+                    <a href="#">
+                        BLOG
+                    </a>
+                </div>
+                <div class="footerItemType1">
+                    <a href="#">
+                        LICENSES
+                    </a>
+                </div>
+                <div class="footerItemType2 last">2023 - made with love</div>
             </div>
         </div>
     </div>
