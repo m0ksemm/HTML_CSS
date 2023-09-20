@@ -39,13 +39,24 @@
             padding-bottom: 20px;
             font-weight: bold;
         }
+        
         #pages {
             display: flex;
             flex-direction: column;
             padding: 10px;
             font-size: 0.6em;
+            
         }
 
+        #pages a {
+            
+            text-decoration: none;
+            display: flex;
+            border: 1px solid transparent;
+        }
+        #pages {
+            border: 1px solid transparent;
+        }
         #pages div{
             display: flex;
             padding-left: 15px;
@@ -63,6 +74,14 @@
             border: 1px solid #c3c3c3;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
         }
+        .textColorWhite {
+            color:white;
+        }
+        .textColorBlack {
+            color:black;
+        }
+        
+        
         #pages div p {
             margin-left: 10px;
             margin-right: 30px;
@@ -131,7 +150,7 @@
             text-align: left;
         }
         .lableType2{
-            margin-top: 10px;
+            margin-top: 5px;
             font-size: 0.8em;
             text-align: left;
         }
@@ -170,7 +189,7 @@
             border-collapse:collapse;
             margin-top: 10px;
         }
-         td {
+        td {
             border-top: 2px solid gray;
             margin: 0;
             padding: 3px;
@@ -224,24 +243,34 @@
             </div>
             <div id="pages">
                 <div>
-                    <img src="./icons_exam_task1/dashboard_gray.svg" alt="account_icon_gray"> 
-                    <p>Dashboard</p>
+                    <a href="./index.html" class="textColorBlack"> 
+                        <img src="./icons_exam_task1/dashboard_gray.svg" alt="account_icon_gray"> 
+                        <p>Dashboard</p>
+                    </a>
                 </div>
                 <div class="page chosen">
-                    <img src="./icons_exam_task1/account_white.svg" alt="account_icon_gray"> 
-                    <p>User Profile</p>
+                    <a href="#" class="textColorWhite"> 
+                        <img src="./icons_exam_task1/account_white.svg" alt="account_icon_gray"> 
+                        <p>User Profile</p>
+                    </a>
                 </div>
                 <div>
-                    <img src="./icons_exam_task1/map_gray.svg" alt="map_icon_gray"> 
-                    <p>Maps</p>
+                    <a href="#" class="textColorBlack"> 
+                        <img src="./icons_exam_task1/map_gray.svg" alt="map_icon_gray"> 
+                        <p>Maps</p>
+                    </a>
                 </div>
                 <div>
-                    <img src="./icons_exam_task1/notify_gray.svg" alt="notify_icon_gray"> 
-                    <p>Notifications</p>
+                    <a href="#" class="textColorBlack"> 
+                        <img src="./icons_exam_task1/notify_gray.svg" alt="notify_icon_gray"> 
+                        <p>Notifications</p>
+                    </a>
                 </div>
                 <div>
-                    <img src="./icons_exam_task1/support_gray.svg" alt="support_icon_gray"> 
-                    <p>Support</p>
+                    <a href="#" class="textColorBlack"> 
+                        <img src="./icons_exam_task1/support_gray.svg" alt="support_icon_gray"> 
+                        <p>Support</p>
+                    </a>
                 </div>
             </div>
         </div>
