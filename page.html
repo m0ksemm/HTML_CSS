@@ -1,325 +1,509 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body {
-            font-size: 1em;
-            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
-        }
-        #main {
-            display: flex;
-        }
-        #bodyItem1 {
-            flex-grow: 0;
-            background-color: #f6f6f6;
-            border-right: 3px solid #c3c3c3;
-        }
-        #bodyItem2 {
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-            background-color: #eaeaea;
-        }
-        .headerB{
-            padding-left: 30px;
-            padding-right: 30px;
-            padding-top: 20px;
-            padding-bottom: 20px;
-            font-weight: bold;
-            border-bottom: 3px solid #e6e6e6;
-        }
-        .header{
-            display: flex;
-            padding-left: 30px;
-            padding-right: 30px;
-            padding-top: 20px;
-            padding-bottom: 20px;
-            font-weight: bold;
-        }
-        
-        #pages {
-            display: flex;
-            flex-direction: column;
-            padding: 10px;
-            font-size: 0.6em;
-            
-        }
+      body {
+        font-size: 1em;
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      }
+      #main {
+        display: flex;
+      }
+      #bodyItem1 {
+        flex-grow: 0;
+        background-color: #f6f6f6;
+        border-right: 3px solid #c3c3c3;
+      }
+      #bodyItem2 {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        background-color: #eaeaea;
+      }
+      .headerB {
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        font-weight: bold;
+        border-bottom: 3px solid #e6e6e6;
+      }
+      .header {
+        display: flex;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        font-weight: bold;
+      }
 
-        #pages a {
-            
-            text-decoration: none;
-            display: flex;
-            border: 1px solid transparent;
-        }
-        #pages {
-            border: 1px solid transparent;
-        }
-        #pages div{
-            display: flex;
-            padding-left: 15px;
-            border: 1px solid transparent;
-        }
-        #pages div:hover{
-            background-color: #c32056;
-            color: white;
-            border: 1px solid #c3c3c3;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-        }
-        .chosen{
-            background-color: #c32056;
-            color: white;
-            border: 1px solid #c3c3c3;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-        }
-        .textColorWhite {
-            color:white;
-        }
-        .textColorBlack {
-            color:black;
-        }
-        
-        
-        #pages div p {
-            margin-left: 10px;
-            margin-right: 30px;
-        }
-        #getMenu {
-            display: none;
-            flex-direction: column;
-            padding: 5px;
-            margin-top: -5px;
-            margin-right: 10px;
-        }
-        .getMenuRectangle {
-            margin: 2px;
-            border: 1px solid gray;
-            background-color: gray;
-            height: 3px;
-            width: 30px;
-        }
-        img {
-            align-self: center;
-            height: 30px;
-        }
+      #pages {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        font-size: 0.6em;
+      }
+      #pages a {
+        text-decoration: none;
+        display: flex;
+        border: 1px solid transparent;
+      }
+      #pages {
+        border: 1px solid transparent;
+      }
+      #pages div {
+        display: flex;
+        padding-left: 15px;
+        border: 1px solid transparent;
+      }
+      #pages div:hover {
+        background-color: #c32056;
+        color: white;
+        border: 1px solid #c3c3c3;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+      }
+      .chosen {
+        background-color: #c32056;
+        color: white;
+        border: 1px solid #c3c3c3;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+      }
+      .textColorWhite {
+        color: white;
+      }
+      .textColorBlack {
+        color: black;
+      }
+
+      #pages div p {
+        margin-left: 10px;
+        margin-right: 30px;
+      }
+      #getMenu {
+        display: none;
+        flex-direction: column;
+        padding: 5px;
+        margin-top: -5px;
+        margin-right: 10px;
+      }
+      .getMenuRectangle {
+        margin: 2px;
+        border: 1px solid gray;
+        background-color: gray;
+        height: 3px;
+        width: 30px;
+      }
+      img {
+        align-self: center;
+        height: 30px;
+      }
+      #container1 {
+        flex-shrink: 1;
+        padding: 15px;
+        display: flex;
+        padding-top: 30px;
+      }
+      .containerItem1 {
+        flex: 2;
+        padding-left: 15px;
+        padding-right: 15px;
+        background-color: white;
+        border-right: 3px solid #c3c3c3;
+        border-bottom: 3px solid #c3c3c3;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        margin-right: 15px;
+        height: fit-content;
+      }
+      .containerItem2 {
+        flex: 1;
+        padding-left: 15px;
+        padding-right: 15px;
+        background-color: white;
+        border-right: 3px solid #c3c3c3;
+        border-bottom: 3px solid #c3c3c3;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .topDiv {
+        display: flex;
+        border-bottom: 2px solid gray;
+      }
+      .container1picture {
+        color: white;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        margin-top: -15px;
+        height: fit-content;
+      }
+      .lableType1 {
+        text-align: left;
+      }
+      .lableType2 {
+        margin-top: 5px;
+        font-size: 0.8em;
+        text-align: left;
+      }
+      .setGreen {
+        background-color: #448b00;
+      }
+      .setYellow {
+        background-color: #d89e24;
+      }
+      .setBlue {
+        background-color: #274d97;
+      }
+      .setRed {
+        background-color: #c32056;
+      }
+
+      .last {
+        display: flex;
+        margin-left: auto;
+      }
+      .last a {
+        margin-right: 10px;
+      }
+      #stats {
+        color: white;
+        flex-direction: column;
+        display: flex;
+        padding: 10px;
+        margin-top: -15px;
+        flex-grow: 0;
+      }
+      table {
+        font-size: 0.8em;
+        width: 100%;
+        text-align: left;
+        border-collapse: collapse;
+        margin-top: 10px;
+      }
+      td {
+        border-top: 2px solid gray;
+        margin: 0;
+        padding: 3px;
+      }
+      th {
+        color: #60a0a0;
+      }
+      #footer {
+        height: fit-content;
+        flex-shrink: 1;
+        margin-left: 15px;
+        margin-right: 15px;
+        margin-top: 15px;
+        display: flex;
+        padding: 5px;
+        border-top: 2px solid gray;
+      }
+      #footer .footerItemType1 a {
+        text-decoration: none;
+        color: black;
+      }
+      .footerItemType1 {
+        align-self: center;
+        padding: 5px;
+        font-weight: bold;
+        margin-right: 30px;
+      }
+      .footerItemType2 {
+        align-self: center;
+        padding: 5px;
+        font-size: 1.2em;
+      }
+      .footerItemType1:hover {
+        border-top: 1px solid lightblue;
+        border-radius: 3px;
+        background-color: lightblue;
+        color: white;
+      }
+      table {
+        width: 500px;
+        border-collapse: collapse;
+      }
+
+      form {
+        margin-bottom: 15px;
+      }
+      form div {
+        display: flex;
+      }
+      .felxItem {
+        margin-top: 15px;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        margin-right: 20px;
+        border-bottom: 2px solid gray;
+      }
+      input {
+        padding: 3px;
+        margin-top: 2px;
+        font-size: 1em;
+        width: 100%;
+        border: none;
+      }
+      textarea {
+        padding: 3px;
+        margin-top: 2px;
+        font-size: 1em;
+        width: 100%;
+        border: none;
+      }
+      .lastItem {
+        margin-right: 0px;
+      }
+      .Reverse {
+        flex-direction: row-reverse;
+      }
+      button[type="submit"] {
+        margin-top: 15px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 30px;
+        padding-right: 30px;
+        color: white;
+        background-color: #c32056;
+        border: 2px solid transparent;
+      }
+      button[type="submit"]:hover {
+        background-color: #c11046;
+        border: 2px solid gray;
+      }
+      .photoDiv {
+        align-self: center;
+        background-color: #212121;
+        margin-top: -30px;
+        border: 3px solid black;
+        border-radius: 50%;
+      }
+      .profilePhoto {
+        width: 100%;
+        height: 100%;
+      }
+      .allignLeft {
+        align-self: start;
+      }
+      .allignCentre {
+        align-self: center;
+      }
+      .lableType1 {
+        align-self: center;
+        font-size: 0.8em;
+      }
+      .lableType2 {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      .lableType3 {
+        font-size: 1em;
+        align-self: center;
+        text-align: center;
+        margin-bottom: 15px;
+      }
+      .lableType4 {
+        font-size: 0.8em;
+      }
+      @media (min-width: 800px) and (max-width: 1000px) {
         #container1 {
-            flex-shrink: 1;
-            padding: 15px;
-            display: flex;
-            padding-top: 30px;
-            border: 1px solid black;
+          flex-direction: column-reverse;
         }
         .containerItem1 {
-            flex: 2;
-            padding-left: 15px;
-            padding-right: 15px;
-            background-color: white;
-            border-right: 3px solid #c3c3c3;
-            border-bottom: 3px solid #c3c3c3;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-            margin-right: 15px;
-            border: 1px solid black;
-            height: fit-content;
-        }
-        .containerItem2 {
-            flex: 1;
-            padding-left: 15px;
-            padding-right: 15px;
-            background-color: white;
-            border-right: 3px solid #c3c3c3;
-            border-bottom: 3px solid #c3c3c3;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-            border: 1px solid black;
-            height: fit-content;
-        }
-        .topDiv{
-            display: flex;
-            border-bottom: 2px solid gray;
-        }
-        .container1picture {
-            color:white;
-            display: flex;
-            flex-direction: column;         
-            padding: 10px;
-            margin-top: -15px ;
-            height: fit-content;
-        }
-        .lableType1{
-            text-align: left;
-        }
-        .lableType2{
-            margin-top: 5px;
-            font-size: 0.8em;
-            text-align: left;
-        }
-        .setGreen {
-            background-color: #448b00;
-        }
-        .setYellow {
-            background-color: #d89e24;
-        }
-        .setBlue {
-            background-color: #274d97;
-        }
-        .setRed {
-            background-color: #c32056;
-        }
-        
-        .last {
-            display: flex;
-            margin-left: auto;
-        }
-        .last a {
-            margin-right: 10px;
-        }
-        #stats {
-            color: white;
-            flex-direction: column;
-            display: flex;
-            padding: 10px;
-            margin-top: -15px ;
-            flex-grow: 0;
-        }
-        table {
-            font-size: 0.8em;
-            width: 100%;
-            text-align: left;
-            border-collapse:collapse;
-            margin-top: 10px;
-        }
-        td {
-            border-top: 2px solid gray;
-            margin: 0;
-            padding: 3px;
-        }
-        th {
-            color:#60a0a0;
-        }
-        #footer {
-            height: fit-content;
-            flex-shrink: 1;
-            margin-left: 15px;
-            margin-right: 15px;
-            margin-top: 15px;
-            display: flex;
-            padding: 5px;
-            border-top: 2px solid gray;
-        }
-        #footer .footerItemType1 a {
-            text-decoration: none;
-            color:black;
+          margin-top: 40px;
+          margin-right: 0px;
         }
         .footerItemType1 {
-            align-self: center;
-            padding: 5px;
-            font-weight: bold;
-            margin-right: 30px;
+          font-size: 0.8em;
         }
         .footerItemType2 {
-            align-self: center;
-            padding: 5px;
-            font-size: 1.2em;
+          font-size: 0.8em;
         }
-        .footerItemType1:hover {
-            border-top: 1px solid lightblue;
-            border-radius: 3px;
-            background-color: lightblue;
-            color: white
+      }
+      @media (max-width: 800px) {
+        .felxItem{
+          font-size: 0.8em;
         }
-        .rows {
-            display: none;
+        #getMenu {
+          display: flex;
         }
-        
-        
+        #bodyItem1 {
+          display: none;
+        }
+        #container1 {
+          flex-direction: column-reverse;
+        }
+        .containerItem1 {
+          margin-top: 40px;
+          margin-right: 0px;
+        }
+        .footerItemType1 {
+          font-size: 0.7em;
+        }
+        .footerItemType2 {
+          font-size: 0.7em;
+        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div id="main">
-        <div id="bodyItem1">    
-            <div class="headerB">
-                Company
-            </div>
-            <div id="pages">
-                <div>
-                    <a href="./index.html" class="textColorBlack"> 
-                        <img src="./icons_exam_task1/dashboard_gray.svg" alt="account_icon_gray"> 
-                        <p>Dashboard</p>
-                    </a>
-                </div>
-                <div class="page chosen">
-                    <a href="#" class="textColorWhite"> 
-                        <img src="./icons_exam_task1/account_white.svg" alt="account_icon_gray"> 
-                        <p>User Profile</p>
-                    </a>
-                </div>
-                <div>
-                    <a href="#" class="textColorBlack"> 
-                        <img src="./icons_exam_task1/map_gray.svg" alt="map_icon_gray"> 
-                        <p>Maps</p>
-                    </a>
-                </div>
-                <div>
-                    <a href="#" class="textColorBlack"> 
-                        <img src="./icons_exam_task1/notify_gray.svg" alt="notify_icon_gray"> 
-                        <p>Notifications</p>
-                    </a>
-                </div>
-                <div>
-                    <a href="#" class="textColorBlack"> 
-                        <img src="./icons_exam_task1/support_gray.svg" alt="support_icon_gray"> 
-                        <p>Support</p>
-                    </a>
-                </div>
-            </div>
+      <div id="bodyItem1">
+        <div class="headerB">Company</div>
+        <div id="pages">
+          <div>
+            <a href="./index.html" class="textColorBlack">
+              <img
+                src="./icons_exam_task1/dashboard_gray.svg"
+                alt="account_icon_gray"
+              >
+              <p>Dashboard</p>
+            </a>
+          </div>
+          <div class="page chosen">
+            <a href="#" class="textColorWhite">
+              <img
+                src="./icons_exam_task1/account_white.svg"
+                alt="account_icon_gray"
+              >
+              <p>User Profile</p>
+            </a>
+          </div>
+          <div>
+            <a href="#" class="textColorBlack">
+              <img src="./icons_exam_task1/map_gray.svg" alt="map_icon_gray">
+              <p>Maps</p>
+            </a>
+          </div>
+          <div>
+            <a href="#" class="textColorBlack">
+              <img
+                src="./icons_exam_task1/notify_gray.svg"
+                alt="notify_icon_gray"
+              >
+              <p>Notifications</p>
+            </a>
+          </div>
+          <div>
+            <a href="#" class="textColorBlack">
+              <img
+                src="./icons_exam_task1/support_gray.svg"
+                alt="support_icon_gray"
+              >
+              <p>Support</p>
+            </a>
+          </div>
         </div>
-        <div id="bodyItem2">    
-            <div class="header">
-                <div id="getMenu">
-                    <div class="getMenuRectangle"></div>
-                    <div class="getMenuRectangle"></div>
-                    <div class="getMenuRectangle"></div>
-                </div>
-                <div>
-                    User Profile
-                </div>
-            </div>
-            <div id="container1">
-                <div class="containerItem1">
-                    <div class="container1picture setRed">
-                        <div class="lableType1 " > Employees Stats </div>
-                        <div class="lableType2"> New employees on 19th September, 2019</div>
-                    </div>
-                    w
-                </div >
-                <div class="containerItem2">
-                    ww
-                    webw
-                    <br>
-                    webw
-                </div>
-            </div>
-            <div id="footer">
-                <div class="footerItemType1">
-                    <a href="#">
-                        ABOUT
-                    </a>
-                </div>
-                <div class="footerItemType1">
-                    <a href="#">
-                        BLOG
-                    </a>
-                </div>
-                <div class="footerItemType1">
-                    <a href="#">
-                        LICENSES
-                    </a>
-                </div>
-                <div class="footerItemType2 last">2023 - made with love</div>
-            </div>
+      </div>
+      <div id="bodyItem2">
+        <div class="header">
+          <div id="getMenu">
+            <div class="getMenuRectangle"></div>
+            <div class="getMenuRectangle"></div>
+            <div class="getMenuRectangle"></div>
+          </div>
+          <div>User Profile</div>
         </div>
+        <div id="container1">
+          <div class="containerItem1">
+            <div class="container1picture setRed">
+              <div class="allignLeft">Edit Profile</div>
+              <div class="lableType4 allignLeft">Complete your profile</div>
+            </div>
+            <form>
+              <div>
+                <div class="felxItem">
+                  <div>Company</div>
+                  <div><input type="text" name="Company"></div>
+                </div>
+                <div class="felxItem">
+                  <div>Username</div>
+                  <div><input type="text" name="Username"></div>
+                </div>
+                <div class="felxItem lastItem">
+                  <div>Email address</div>
+                  <div><input type="email" name="Email"></div>
+                </div>
+              </div>
+              <div>
+                <div class="felxItem">
+                  <div>First name</div>
+                  <div><input type="text" name="First_name"></div>
+                </div>
+                <div class="felxItem lastItem">
+                  <div>Last name</div>
+                  <div><input type="text" name="Last_name"></div>
+                </div>
+              </div>
+
+              <div>
+                <div class="felxItem lastItem">
+                  <div>Address</div>
+                  <div><input type="text" name="Address"></div>
+                </div>
+              </div>
+              <div>
+                <div class="felxItem">
+                  <div>City</div>
+                  <div><input type="text" name="City"></div>
+                </div>
+                <div class="felxItem">
+                  <div>Country</div>
+                  <div><input type="text" name="Country"></div>
+                </div>
+                <div class="felxItem lastItem">
+                  <div>Postal code</div>
+                  <div><input type="text" name="Postal_code"></div>
+                </div>
+              </div>
+              <div>
+                <div class="felxItem lastItem">
+                  <div>About me</div>
+                  <div><textarea name="About"></textarea></div>
+                </div>
+              </div>
+              <div class="Reverse">
+                <button type="submit" name="update">UPDATE PROFILE</button>
+              </div>
+            </form>
+          </div>
+          <div class="containerItem2">
+            <div class="photoDiv">
+              <img
+                src="./icons_exam_task1/Снимок-removebg-preview.png"
+                alt="Profile_photo"
+                class="profilePhoto"
+              >
+            </div>
+            <div class="lableType1">CEO/CO-FOUNDER</div>
+            <div class="lableType2 allignCentre">Alec Thompson</div>
+            <div class="lableType3">
+              Don't be scared of the truth because we need to restart the human
+              foundation in trush And I love you like Kanye loves Kanye I love
+              Rick Owen's bed design but the back is...
+            </div>
+          </div>
+        </div>
+        <div id="footer">
+          <div class="footerItemType1">
+            <a href="#"> ABOUT </a>
+          </div>
+          <div class="footerItemType1">
+            <a href="#"> BLOG </a>
+          </div>
+          <div class="footerItemType1">
+            <a href="#"> LICENSES </a>
+          </div>
+          <div class="footerItemType2 last">2023 - made with love</div>
+        </div>
+      </div>
     </div>
-    
-</body>
+  </body>
 </html>

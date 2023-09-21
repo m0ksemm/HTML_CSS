@@ -1,811 +1,914 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body {
-            font-size: 1em;
-            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
-        }
-        #main {
-            display: flex;
-        }
-        #bodyItem1 {
-            flex-grow: 0;
-            background-color: #f6f6f6;
-            border-right: 3px solid #c3c3c3;
-        }
-        #bodyItem2 {
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-            background-color: #eaeaea;
-        }
-        .headerB{
-            padding-left: 30px;
-            padding-right: 30px;
-            padding-top: 20px;
-            padding-bottom: 20px;
-            font-weight: bold;
-            border-bottom: 3px solid #e6e6e6;
-        }
-        .header{
-            display: flex;
-            padding-left: 30px;
-            padding-right: 30px;
-            padding-top: 20px;
-            padding-bottom: 20px;
-            font-weight: bold;
-        }
-        #pages {
-            display: flex;
-            flex-direction: column;
-            padding: 10px;
-            font-size: 0.6em;
-        }
+      body {
+        font-size: 1em;
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      }
+      #main {
+        display: flex;
+      }
+      #bodyItem1 {
+        flex-grow: 0;
+        background-color: #f6f6f6;
+        border-right: 3px solid #c3c3c3;
+      }
+      #bodyItem2 {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        background-color: #eaeaea;
+      }
+      .headerB {
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        font-weight: bold;
+        border-bottom: 3px solid #e6e6e6;
+      }
+      .header {
+        display: flex;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        font-weight: bold;
+      }
+      #pages {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        font-size: 0.6em;
+      }
 
-        #pages div{
-            display: flex;
-            padding-left: 15px;
-            border: 1px solid transparent;
-        }
-        #pages div:hover{
-            background-color: #c32056;
-            color: white;
-            border: 1px solid #c3c3c3;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-        }
-        .textColorWhite {
-            color:white;
-        }
-        .textColorBlack {
-            color:black;
-        }
-        .chosen{
-            background-color: #c32056;
-            color: white;
-            border: 1px solid #c3c3c3;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-        }
-        #pages div p {
-            margin-left: 10px;
-            margin-right: 30px;
-        }
-        #getMenu {
-            display: none;
-            flex-direction: column;
-            padding: 5px;
-            margin-top: -5px;
-            margin-right: 10px;
-        }
-        .getMenuRectangle {
-            margin: 2px;
-            border: 1px solid gray;
-            background-color: gray;
-            height: 3px;
-            width: 30px;
-        }
-        img {
-            align-self: center;
-            height: 30px;
-        }
+      #pages div {
+        display: flex;
+        padding-left: 15px;
+        border: 1px solid transparent;
+      }
+      #pages div:hover {
+        background-color: #c32056;
+        color: white;
+        border: 1px solid #c3c3c3;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+      }
+      .textColorWhite {
+        color: white;
+      }
+      .textColorBlack {
+        color: black;
+      }
+      .chosen {
+        background-color: #c32056;
+        color: white;
+        border: 1px solid #c3c3c3;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+      }
+      #pages div p {
+        margin-left: 10px;
+        margin-right: 30px;
+      }
+      #getMenu {
+        display: none;
+        flex-direction: column;
+        padding: 5px;
+        margin-top: -5px;
+        margin-right: 10px;
+      }
+      .getMenuRectangle {
+        margin: 2px;
+        border: 1px solid gray;
+        background-color: gray;
+        height: 3px;
+        width: 30px;
+      }
+      img {
+        align-self: center;
+        height: 30px;
+      }
+      #container1 {
+        flex-shrink: 1;
+        padding: 15px;
+        display: flex;
+        padding-top: 30px;
+      }
+      .container1item {
+        flex: 1;
+        padding-left: 15px;
+        padding-right: 15px;
+        background-color: white;
+        border-right: 3px solid #c3c3c3;
+        border-bottom: 3px solid #c3c3c3;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        margin-right: 15px;
+      }
+      .topDiv {
+        display: flex;
+        border-bottom: 2px solid gray;
+      }
+      .container1picture {
+        display: flex;
+        padding: 15px;
+        text-align: center;
+        margin-top: -15px;
+        height: fit-content;
+        margin-right: 20px;
+        flex-grow: 0;
+      }
+      .setGreen {
+        background-color: #448b00;
+      }
+      .setYellow {
+        background-color: #d89e24;
+      }
+      .setBlue {
+        background-color: #274d97;
+      }
+      .setRed {
+        background-color: #c32056;
+      }
+      .lableContainer {
+        display: flex;
+        flex-direction: column;
+        float: right;
+        flex-grow: 1;
+      }
+      .lableType1 {
+        margin-top: 10px;
+        align-self: self-end;
+        font-size: 0.8em;
+      }
+      .lableType2 {
+        align-self: self-end;
+        font-size: 1em;
+        margin-bottom: 10px;
+      }
+      .bottomDiv {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-size: 0.6em;
+        display: flex;
+        align-items: center;
+      }
+      .smallPicture {
+        height: 10px;
+        margin-right: 5px;
+      }
+      #container2 {
+        flex-shrink: 1;
+        margin-top: 10px;
+        padding: 15px;
+        display: flex;
+      }
+      .container2item {
+        flex: 1;
+        padding-left: 15px;
+        padding-right: 15px;
+        background-color: white;
+        border-right: 3px solid #c3c3c3;
+        border-bottom: 3px solid #c3c3c3;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        margin-right: 15px;
+      }
+      .container2picture {
+        color: white;
+        display: flex;
+        padding: 10px;
+        text-align: center;
+        margin-top: -15px;
+        flex-grow: 0;
+      }
+      .columnDiv {
+        display: flex;
+        flex-direction: column;
+      }
+      .diagramPicture {
+        width: 100%;
+        height: 100%;
+      }
+      .lableType3 {
+        margin-top: 10px;
+      }
+      .lableType4 {
+        font-size: 0.8em;
+        padding-bottom: 10px;
+        border-bottom: 2px solid gray;
+      }
+      #container3 {
+        flex-shrink: 1;
+        margin-top: 10px;
+        padding: 15px;
+        display: flex;
+      }
+      .container3item {
+        flex: 1;
+        padding-left: 15px;
+        padding-right: 15px;
+        background-color: white;
+        border-right: 3px solid #c3c3c3;
+        border-bottom: 3px solid #c3c3c3;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        margin-right: 15px;
+      }
+      .lastItem {
+        margin-right: 0px;
+      }
+      .options {
+        display: flex;
+      }
+      .option {
+        display: flex;
+        margin-right: 20px;
+        align-self: center;
+        padding: 5px;
+      }
+      .option:hover {
+        background-color: #dead49;
+      }
+      .optionLabel {
+        margin-right: 15px;
+        align-self: center;
+        padding: 5px;
+      }
+      .taskIcon {
+        height: 15px;
+        margin-right: 5px;
+      }
+      a {
+        text-decoration: none;
+        color: white;
+        display: flex;
+      }
+      .checkboxDiv {
+        margin-top: 5px;
+        padding-bottom: 5px;
+        display: flex;
+        border-bottom: 2px solid gray;
+      }
+
+      .DivFirst {
+        margin-top: 15px;
+      }
+      .DivLast {
+        margin-bottom: 15px;
+        border-bottom: none;
+      }
+
+      .checkboxDivItem {
+        align-self: center;
+        font-size: 0.8em;
+        margin-right: 10px;
+      }
+      .last {
+        display: flex;
+        margin-left: auto;
+      }
+      .last a {
+        margin-right: 10px;
+      }
+      #stats {
+        color: white;
+        flex-direction: column;
+        display: flex;
+        padding: 10px;
+        margin-top: -15px;
+        flex-grow: 0;
+      }
+      .lableType5 {
+        font-size: 0.8em;
+      }
+      table {
+        font-size: 0.8em;
+        width: 100%;
+        text-align: left;
+        border-collapse: collapse;
+        margin-top: 10px;
+      }
+      td {
+        border-top: 2px solid gray;
+        margin: 0;
+        padding: 3px;
+      }
+      th {
+        color: #60a0a0;
+      }
+      #footer {
+        height: fit-content;
+        flex-shrink: 1;
+        margin-left: 15px;
+        margin-right: 15px;
+        margin-top: 15px;
+        display: flex;
+        padding: 5px;
+        border-top: 2px solid gray;
+      }
+      #footer .footerItemType1 a {
+        text-decoration: none;
+        color: black;
+      }
+      .footerItemType1 {
+        align-self: center;
+        padding: 5px;
+        font-weight: bold;
+        margin-right: 30px;
+      }
+      .footerItemType2 {
+        align-self: center;
+        padding: 5px;
+        font-size: 1.2em;
+      }
+      .footerItemType1:hover {
+        border-top: 1px solid lightblue;
+        border-radius: 3px;
+        background-color: lightblue;
+        color: white;
+      }
+      .rows {
+        display: none;
+      }
+      @media (min-width: 800px) and (max-width: 1000px) {
         #container1 {
-            flex-shrink: 1;
-            padding: 15px;
-            display: flex;
-            padding-top: 30px;
+          flex-wrap: wrap;
         }
         .container1item {
-            flex: 1;
-            padding-left: 15px;
-            padding-right: 15px;
-            background-color: white;
-            border-right: 3px solid #c3c3c3;
-            border-bottom: 3px solid #c3c3c3;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-            margin-right: 15px;
-        }
-        .topDiv{
-            display: flex;
-            border-bottom: 2px solid gray;
-        }
-        .container1picture {
-            display: flex;
-            padding: 15px;
-            text-align: center;
-            margin-top: -15px ;
-            height: fit-content;
-            margin-right: 20px;
-            flex-grow: 0;
-        }
-        .setGreen {
-            background-color: #448b00;
-        }
-        .setYellow {
-            background-color: #d89e24;
-        }
-        .setBlue {
-            background-color: #274d97;
-        }
-        .setRed {
-            background-color: #c32056;
-        }
-        .lableContainer {
-            display: flex;
-            flex-direction: column;
-            float: right;
-            flex-grow: 1;
-        }
-        .lableType1{
-            margin-top: 10px;
-            align-self:self-end;
-            font-size: 0.8em;
-        }
-        .lableType2{
-            align-self:self-end;
-            font-size: 1em;
-            margin-bottom: 10px;
-        }
-        .bottomDiv{
-            padding-top: 10px;
-            padding-bottom: 10px;
-            font-size: 0.6em;
-            display: flex;
-            align-items: center;
-        }
-        .smallPicture{
-            height: 10px;
-            margin-right: 5px;
-        }
-        #container2 {
-            flex-shrink: 1;
-            margin-top: 10px;
-            padding: 15px;
-            display: flex;
-        }
-        .container2item {
-            flex: 1;
-            padding-left: 15px;
-            padding-right: 15px;
-            background-color: white;
-            border-right: 3px solid #c3c3c3;
-            border-bottom: 3px solid #c3c3c3;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-            margin-right: 15px;
-        }
-        .container2picture {
-            color: white;
-            display: flex;
-            padding: 10px;
-            text-align: center;
-            margin-top: -15px ;
-            flex-grow: 0;
-        }
-        .columnDiv{
-            display: flex;
-            flex-direction: column;
-        }
-        .diagramPicture {
-            width: 100%;
-            height: 100%;
-        }
-        .lableType3 {
-            margin-top: 10px;
-        }
-        .lableType4 {
-            font-size: 0.8em;
-            padding-bottom: 10px;
-            border-bottom: 2px solid gray;
+          min-width: 230px;
         }
         #container3 {
-            flex-shrink: 1;
-            margin-top: 10px;
-            padding: 15px;
-            display: flex;
+          flex-direction: column;
         }
-        .container3item {
-            flex: 1;
-            padding-left: 15px;
-            padding-right: 15px;
-            background-color: white;
-            border-right: 3px solid #c3c3c3;
-            border-bottom: 3px solid #c3c3c3;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-            margin-right: 15px;
+        #cont3itm1 {
+          margin-right: 0px;
         }
-        .lastItem {
-            margin-right: 0px;
+        #cont3itm2 {
+          margin-top: 40px;
         }
-        .options {
-            display: flex;
+        #cont1itm2 {
+          margin-right: 0px;
         }
-        .option {
-            display: flex;
-            margin-right: 20px;
-            align-self: center;
-            padding: 5px;
+        #cont1itm3 {
+          margin-top: 25px;
         }
-        .option:hover {
-            background-color: #dead49;
-
+        #cont1itm4 {
+          margin-top: 25px;
         }
-        .optionLabel {
-            margin-right: 15px;
-            align-self: center;
-            padding: 5px;
+      }
+      @media (min-width: 650px) and (max-width: 800px) {
+        #bodyItem1 {
+          display: none;
         }
-        .taskIcon {
-            height: 15px;
-            margin-right: 5px;
-        }
-        a {
-            text-decoration: none;
-            color: white;
-            display: flex;
-        }
-        .checkboxDiv{
-            margin-top: 5px;
-            padding-bottom: 5px;
-            display: flex;
-            border-bottom: 2px solid gray;
+        #getMenu {
+          display: flex;
         }
 
-        .DivFirst{
-            margin-top: 15px;
+        #container1 {
+          flex-wrap: wrap;
         }
-        .DivLast{
-            margin-bottom: 15px;
-            border-bottom: none;
+        .container1item {
+          min-width: 230px;
         }
-
-        .checkboxDivItem{
-            align-self: center;
-            font-size: 0.8em;
-            margin-right: 10px;
+        #container3 {
+          flex-direction: column;
         }
-        .last {
-            display: flex;
-            margin-left: auto;
+        #cont3itm1 {
+          margin-right: 0px;
         }
-        .last a {
-            margin-right: 10px;
+        #cont3itm2 {
+          margin-top: 40px;
         }
-        #stats {
-            color: white;
-            flex-direction: column;
-            display: flex;
-            padding: 10px;
-            margin-top: -15px ;
-            flex-grow: 0;
+        #cont1itm2 {
+          margin-right: 0px;
         }
-        .lableType5{
-            font-size: 0.8em;
+        #cont1itm3 {
+          margin-top: 25px;
         }
-        table {
-            font-size: 0.8em;
-            width: 100%;
-            text-align: left;
-            border-collapse:collapse;
-            margin-top: 10px;
+        #cont1itm4 {
+          margin-top: 25px;
         }
-         td {
-            border-top: 2px solid gray;
-            margin: 0;
-            padding: 3px;
+      }
+      @media (min-width: 500px) and (max-width: 650px) {
+        #bodyItem1 {
+          display: none;
         }
-        th {
-            color:#60a0a0;
+        #getMenu {
+          display: flex;
         }
-        #footer {
-            height: fit-content;
-            flex-shrink: 1;
-            margin-left: 15px;
-            margin-right: 15px;
-            margin-top: 15px;
-            display: flex;
-            padding: 5px;
-            border-top: 2px solid gray;
+        #container1 {
+          flex-wrap: wrap;
         }
-        #footer .footerItemType1 a {
-            text-decoration: none;
-            color:black;
+        .container1item {
+          min-width: 170px;
+        }
+        #container2 {
+          flex-direction: column;
+        }
+        #container3 {
+          flex-direction: column;
+        }
+        #cont3itm1 {
+          margin-right: 0px;
+        }
+        #cont3itm2 {
+          margin-top: 40px;
+        }
+        #cont1itm2 {
+          margin-right: 0px;
+        }
+        #cont1itm3 {
+          margin-top: 25px;
+        }
+        #cont1itm4 {
+          margin-top: 25px;
+        }
+        #cont2itm1 {
+          margin-right: 0px;
+        }
+        #cont2itm2 {
+          margin-top: 40px;
+          margin-right: 0px;
+        }
+        #cont2itm3 {
+          margin-top: 40px;
+        }
+      }
+      @media (max-width: 500px) {
+        #bodyItem1 {
+          display: none;
+        }
+        #getMenu {
+          display: flex;
+        }
+        #container1 {
+          flex-direction: column;
+        }
+        #container2 {
+          flex-direction: column;
+        }
+        #container3 {
+          flex-direction: column;
+        }
+        #cont3itm1 {
+          margin-right: 0px;
+        }
+        #cont3itm2 {
+          margin-top: 40px;
+        }
+        #cont1itm1 {
+          margin-right: 0px;
+        }
+        #cont1itm2 {
+          margin-top: 25px;
+          margin-right: 0px;
+        }
+        #cont1itm3 {
+          margin-top: 25px;
+          margin-right: 0px;
+        }
+        #cont1itm4 {
+          margin-top: 25px;
+        }
+        #cont2itm1 {
+          margin-right: 0px;
+        }
+        #cont2itm2 {
+          margin-top: 40px;
+          margin-right: 0px;
+        }
+        #cont2itm3 {
+          margin-top: 40px;
+          margin-right: 0px;
         }
         .footerItemType1 {
-            align-self: center;
-            padding: 5px;
-            font-weight: bold;
-            margin-right: 30px;
+          font-size: 0.7em;
         }
         .footerItemType2 {
-            align-self: center;
-            padding: 5px;
-            font-size: 1.2em;
+          font-size: 0.7em;
         }
-        .footerItemType1:hover {
-            border-top: 1px solid lightblue;
-            border-radius: 3px;
-            background-color: lightblue;
-            color: white
-        }
-        .rows {
-            display: none;
-        }
-        @media (min-width:800px) and (max-width:1000px){
-            #container1 {
-                flex-wrap: wrap;
-            }
-            .container1item {
-                min-width: 230px;
-            }
-            #container3 {
-                flex-direction: column;
-            }
-            #cont3itm1 {
-                margin-right: 0px;
-            }
-            #cont3itm2 {
-                margin-top: 40px;
-            }
-            #cont1itm2 {
-                margin-right: 0px;
-            }
-            #cont1itm3 {
-                margin-top: 25px;
-            }
-            #cont1itm4 {
-                margin-top: 25px;
-            }
-        }
-        @media (min-width:650px) and (max-width:800px){
-            #bodyItem1 {
-                display: none;
-            }
-            #getMenu {
-                display: flex;
-            }
-
-            #container1 {
-                flex-wrap: wrap;
-            }
-            .container1item {
-                min-width: 230px;
-            }
-            #container3 {
-                flex-direction: column;
-            }
-            #cont3itm1 {
-                margin-right: 0px;
-            }
-            #cont3itm2 {
-                margin-top: 40px;
-            }
-            #cont1itm2 {
-                margin-right: 0px;
-            }
-            #cont1itm3 {
-                margin-top: 25px;
-            }
-            #cont1itm4 {
-                margin-top: 25px;
-            }
-        }
-        @media (min-width:500px) and (max-width:650px){
-            #bodyItem1 {
-                display: none;
-            }
-            #getMenu {
-                display: flex;
-            }
-            #container1 {
-                flex-wrap: wrap;
-            }
-            .container1item {
-                min-width: 170px;
-            }
-            #container2 {
-                flex-direction: column;
-            }
-            #container3 {
-                flex-direction: column;
-            }
-            #cont3itm1 {
-                margin-right: 0px;
-            }
-            #cont3itm2 {
-                margin-top: 40px;
-            }
-            #cont1itm2 {
-                margin-right: 0px;
-            }
-            #cont1itm3 {
-                margin-top: 25px;
-            }
-            #cont1itm4 {
-                margin-top: 25px;
-            }
-            #cont2itm1 {
-                margin-right: 0px;
-            }
-            #cont2itm2 {
-                margin-top: 40px;
-                margin-right: 0px;
-            }
-            #cont2itm3 {
-                margin-top: 40px;
-            }
-        }
-        @media (max-width:500px){
-            #bodyItem1 {
-                display: none;
-            }
-            #getMenu {
-                display: flex;
-            }
-            #container1 {
-                flex-direction: column;
-            }
-            #container2 {
-                flex-direction: column;
-            }
-            #container3 {
-                flex-direction: column;
-            }
-            #cont3itm1 {
-                margin-right: 0px;
-            }
-            #cont3itm2 {
-                margin-top: 40px;
-            }
-            #cont1itm1 {
-                margin-right: 0px;
-            }
-            #cont1itm2 {
-                margin-top: 25px;
-                margin-right: 0px;
-            }
-            #cont1itm3 {
-                margin-top: 25px;
-                margin-right: 0px;
-            }
-            #cont1itm4 {
-                margin-top: 25px;
-            }
-            #cont2itm1 {
-                margin-right: 0px;
-            }
-            #cont2itm2 {
-                margin-top: 40px;
-                margin-right: 0px;
-            }
-            #cont2itm3 {
-                margin-top: 40px;
-                margin-right: 0px;
-            }
-            .footerItemType1 {
-                font-size: 0.7em;
-            }
-            .footerItemType2 {
-                font-size: 0.7em;
-            }
-        }
-        
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div id="main">
-        <div id="bodyItem1">    
-            <div class="headerB">
-                Company
-            </div>
-            <div id="pages">
-                <div class="page chosen">
-                    <a href="#" class="textColorWhite"> 
-                        <img src="./icons_exam_task1/dashboard_white.svg" alt="account_icon_gray"> 
-                        <p>Dashboard</p>
-                    </a>
-                </div>
-                <div>
-                    <a href="./page.html" class="textColorBlack"> 
-                        <img src="./icons_exam_task1/account_gray.svg" alt="account_icon_gray"> 
-                        <p>User Profile</p>
-                    </a>
-                </div>
-                <div>
-                    <a href="#" class="textColorBlack"> 
-                        <img src="./icons_exam_task1/map_gray.svg" alt="map_icon_gray"> 
-                        <p>Maps</p>
-                    </a>
-                </div>
-                <div>
-                    <a href="#" class="textColorBlack"> 
-                        <img src="./icons_exam_task1/notify_gray.svg" alt="notify_icon_gray"> 
-                        <p>Notifications</p>
-                    </a>
-                </div>
-                <div>
-                    <a href="#" class="textColorBlack"> 
-                        <img src="./icons_exam_task1/support_gray.svg" alt="support_icon_gray"> 
-                        <p>Support</p>
-                    </a>
-                </div>
-            </div>
+      <div id="bodyItem1">
+        <div class="headerB">Company</div>
+        <div id="pages">
+          <div class="page chosen">
+            <a href="#" class="textColorWhite">
+              <img
+                src="./icons_exam_task1/dashboard_white.svg"
+                alt="account_icon_gray"
+              >
+              <p>Dashboard</p>
+            </a>
+          </div>
+          <div>
+            <a href="./page.html" class="textColorBlack">
+              <img
+                src="./icons_exam_task1/account_gray.svg"
+                alt="account_icon_gray"
+              >
+              <p>User Profile</p>
+            </a>
+          </div>
+          <div>
+            <a href="#" class="textColorBlack">
+              <img src="./icons_exam_task1/map_gray.svg" alt="map_icon_gray" >
+              <p>Maps</p>
+            </a>
+          </div>
+          <div>
+            <a href="#" class="textColorBlack">
+              <img
+                src="./icons_exam_task1/notify_gray.svg"
+                alt="notify_icon_gray"
+              >
+              <p>Notifications</p>
+            </a>
+          </div>
+          <div>
+            <a href="#" class="textColorBlack">
+              <img
+                src="./icons_exam_task1/support_gray.svg"
+                alt="support_icon_gray"
+              >
+              <p>Support</p>
+            </a>
+          </div>
         </div>
-        <div id="bodyItem2">    
-            <div class="header">
-                <div id="getMenu">
-                    <div class="getMenuRectangle"></div>
-                    <div class="getMenuRectangle"></div>
-                    <div class="getMenuRectangle"></div>
-                </div>
-                <div>
-                    Dashboard
-                </div>
-            </div>
-            <div id="container1">
-                <div class="container1item" id="cont1itm1">
-                    
-                        <div class="topDiv">
-                            <div class="container1picture setGreen">
-                                <img src="./icons_exam_task1/data_white.svg" alt="data_white">
-                            </div>
-                            <div class="lableContainer">
-                                <div class="lableType1">Used Space</div>
-                                <div class="lableType2">49/50 GB</div>
-                            </div>
-                        </div>
-                        <div class="bottomDiv">
-                            <img src="./icons_exam_task1/alert.png" class="smallPicture" alt="Calendar">
-                            Get more space...
-                        </div>
-                        </div>
-            <div class="container1item" id="cont1itm2">
-                <div class="topDiv">
-                    <div class="container1picture setYellow">
-                        <img src="./icons_exam_task1/shop_white.svg" alt="shop_white">
-                    </div>
-                    <div class="lableContainer">
-                        <div class="lableType1">Revenue</div>
-                        <div class="lableType2">$ 34.245</div>
-                    </div>
-                </div>
-                <div class="bottomDiv">
-                    <img src="./icons_exam_task1/calendar.png" class="smallPicture" alt="down">
-                    Last 24 Hours
-                </div>
-            </div>
-                    
-                <div class="container1item" id="cont1itm3">
-                    <div class="topDiv">
-                        <div class="container1picture setBlue">
-                            <img src="./icons_exam_task1/tag_white.svg" alt="tag_white">
-                        </div>
-                        <div class="lableContainer">
-                            <div class="lableType1">Fixed Issues</div>
-                            <div class="lableType2">75</div>
-                        </div>
-                    </div>
-                    <div class="bottomDiv">
-                        <img src="./icons_exam_task1/down.png" class="smallPicture" alt="timer">
-                        Tracked form Github
-                    </div>
-                </div>
-                <div class="container1item lastItem" id="cont1itm4">
-                    <div class="topDiv">
-                        <div class="container1picture setRed">
-                            <img src="./icons_exam_task1/paperplane_white.svg" alt="paperplane_white">
-                        </div>
-                        <div class="lableContainer">
-                            <div class="lableType1">Followers</div>
-                            <div class="lableType2">+245</div>
-                        </div>
-                    </div>
-                    <div class="bottomDiv">
-                        <img src="./icons_exam_task1/time.png" class="smallPicture" alt="alert">
-                        Just updated
-                    </div>
-                </div>
-            </div>
-            <div id="container2">
-                <div class="container2item" id="cont2itm1">
-                    <div class="columnDiv">
-                        <div class="container2picture setGreen">
-                            <img src="./icons_exam_task1/graphics.svg" class="diagramPicture" alt="graphics1">
-                        </div>
-                        <div>
-                            <div class="lableType3">Daily Sales</div>
-                        </div>
-                            <div class="lableType4">53% increase in today sales</div>
-                        <div class="bottomDiv">
-                            <img src="./icons_exam_task1/time.png" class="smallPicture" alt="alert">
-                            updated 4 minutes ago
-                        </div>
-                    </div>
-                </div>
-                <div class="container2item" id="cont2itm2">
-                    <div class="columnDiv">
-                        <div class="container2picture setYellow">
-                            <img src="./icons_exam_task1/graphics.svg" class="diagramPicture" alt="graphics2">
-                        </div>
-                        <div>
-                            <div class="lableType3">Email Subscriprions</div>
-                        </div>
-                            <div class="lableType4">Last Campaign Performance</div>
-                        <div class="bottomDiv">
-                            <img src="./icons_exam_task1/time.png" class="smallPicture" alt="alert">
-                            campaign event 2 days ago
-                        </div>
-                    </div>
-                </div>
-                <div class="container2item lastItem" id="cont2itm3">
-                    <div class="columnDiv">
-                        <div class="container2picture setBlue">
-                            <img src="./icons_exam_task1/graphics.svg" class="diagramPicture" alt="graphics3">
-                        </div>
-                        <div>
-                            <div class="lableType3">Completed Tasks</div>
-                        </div>
-                            <div class="lableType4">Last Campaign Performance</div>
-                        <div class="bottomDiv">
-                            <img src="./icons_exam_task1/time.png" class="smallPicture" alt="alert">
-                            campaign event 2 days ago
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="container3">
-                <div class="container3item " id="cont3itm1">
-                    <div class="columnDiv">
-                        <div class="container2picture setYellow">
-                            <div class="optionLabel">
-                                Tasks:
-                            </div>
-                            <div class="option">
-                                <a href="#">
-                                    <img src="./icons_exam_task1/bug.svg" alt="bug" class="taskIcon">
-                                    <div>Bugs</div>
-                                </a>
-                            </div>
-                            <div class="option">
-                                <a href="#">
-                                    <img src="./icons_exam_task1/web.svg" alt="web" class="taskIcon">
-                                    <div>Website</div>
-                                </a>
-                            </div>
-                            <div class="option">
-                                <a href="#">
-                                    <img src="./icons_exam_task1/cloud.svg" alt="cloud" class="taskIcon">
-                                    <div>Server</div>
-                                </a>
-                            </div>
-                        </div>
-                        <form>
-                            <div class="checkboxDiv DivFirst">
-                                <input type="checkbox" Name="checkbox1" class="checkboxDivItem">
-                                <div class="checkboxDivItem"> 
-                                    Sign contract for "What are conference organizers afraid of?"
-                                </div>
-                                <div class="checkboxDivItem last ">
-                                    <a href="#">
-                                        <img src="./icons_exam_task1/edit.png" class="taskIcon" alt="edit1">
-                                    </a>
-                                    <a href="#">
-                                        <img src="./icons_exam_task1/remove.png" class="taskIcon" alt="remove1">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="checkboxDiv">
-                                <input type="checkbox" Name="checkbox1" class="checkboxDivItem">
-                                <div class="checkboxDivItem"> 
-                                    Lines from Great Ukrainian Literature? Or E-mails From My Boss?
-                                </div>
-                                <div class="checkboxDivItem last ">
-                                    <a href="#">
-                                        <img src="./icons_exam_task1/edit.png" class="taskIcon" alt="edit2">
-                                    </a>
-                                    <a href="#">
-                                        <img src="./icons_exam_task1/remove.png" class="taskIcon" alt="remove2">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="checkboxDiv">
-                                <input type="checkbox" Name="checkbox1" class="checkboxDivItem">
-                                <div class="checkboxDivItem"> 
-                                    Sign contract for "What are project managers afraid of?"
-                                </div>
-                                <div class="checkboxDivItem last ">
-                                    <a href="#">
-                                        <img src="./icons_exam_task1/edit.png" class="taskIcon" alt="edit3">
-                                    </a>
-                                    <a href="#">
-                                        <img src="./icons_exam_task1/remove.png" class="taskIcon" alt="remove3">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="checkboxDiv DivLast">
-                                <input type="checkbox" Name="checkbox1" class="checkboxDivItem">
-                                <div class="checkboxDivItem"> 
-                                    Sign contract for "What are typical workers afraid of?"
-                                </div>
-                                <div class="checkboxDivItem last ">
-                                    <a href="#">
-                                        <img src="./icons_exam_task1/edit.png" class="taskIcon" alt="edit4">
-                                    </a>
-                                    <a href="#">
-                                        <img src="./icons_exam_task1/remove.png" class="taskIcon" alt="remove4">
-                                    </a>
-                                </div>
-                            </div>
-                        </form>
-                        
-                    </div>
-                </div>
-                <div class="container3item lastItem" id="cont3itm2">
-                    <div id="stats" class="setBlue">
-                        <div>Employees Stats</div>
-                        <div class="lableType5 ">New employees on 19th September, 2019</div>
-                    </div>
-                    <div>
-                        <table>
-                            <thead>	 
-                                <tr>
-                                    <th>ID</th>
-                                    <th>Name</th>
-                                    <th>Salary</th>
-                                    <th>Country</th>
-                                </tr>		
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Luka Rice</td>
-                                    <td>$1212.763</td>
-                                    <td>Poland</td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>Mike Norland</td>
-                                    <td>$2201.162</td>
-                                    <td>England</td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td>Hans Eidens</td>
-                                    <td>$1931.717</td>
-                                    <td>Germany</td>
-                                </tr>
-                                <tr>
-                                    <td>4</td>
-                                    <td>Mario Musali</td>
-                                    <td>$1031.731</td>
-                                    <td>Italy</td>
-                                </tr>				
-                            </tbody>	
-                        </table>
-                    </div>
-                </div>
-            </div>
-            <div id="footer">
-                <div class="footerItemType1">
-                    <a href="#">
-                        ABOUT
-                    </a>
-                </div>
-                <div class="footerItemType1">
-                    <a href="#">
-                        BLOG
-                    </a>
-                </div>
-                <div class="footerItemType1">
-                    <a href="#">
-                        LICENSES
-                    </a>
-                </div>
-                <div class="footerItemType2 last">2023 - made with love</div>
-            </div>
+      </div>
+      <div id="bodyItem2">
+        <div class="header">
+          <div id="getMenu">
+            <div class="getMenuRectangle"></div>
+            <div class="getMenuRectangle"></div>
+            <div class="getMenuRectangle"></div>
+          </div>
+          <div>Dashboard</div>
         </div>
+        <div id="container1">
+          <div class="container1item" id="cont1itm1">
+            <div class="topDiv">
+              <div class="container1picture setGreen">
+                <img src="./icons_exam_task1/data_white.svg" alt="data_white" >
+              </div>
+              <div class="lableContainer">
+                <div class="lableType1">Used Space</div>
+                <div class="lableType2">49/50 GB</div>
+              </div>
+            </div>
+            <div class="bottomDiv">
+              <img
+                src="./icons_exam_task1/alert.png"
+                class="smallPicture"
+                alt="Calendar"
+              >
+              Get more space...
+            </div>
+          </div>
+          <div class="container1item" id="cont1itm2">
+            <div class="topDiv">
+              <div class="container1picture setYellow">
+                <img src="./icons_exam_task1/shop_white.svg" alt="shop_white" >
+              </div>
+              <div class="lableContainer">
+                <div class="lableType1">Revenue</div>
+                <div class="lableType2">$ 34.245</div>
+              </div>
+            </div>
+            <div class="bottomDiv">
+              <img
+                src="./icons_exam_task1/calendar.png"
+                class="smallPicture"
+                alt="down"
+              >
+              Last 24 Hours
+            </div>
+          </div>
+
+          <div class="container1item" id="cont1itm3">
+            <div class="topDiv">
+              <div class="container1picture setBlue">
+                <img src="./icons_exam_task1/tag_white.svg" alt="tag_white" >
+              </div>
+              <div class="lableContainer">
+                <div class="lableType1">Fixed Issues</div>
+                <div class="lableType2">75</div>
+              </div>
+            </div>
+            <div class="bottomDiv">
+              <img
+                src="./icons_exam_task1/down.png"
+                class="smallPicture"
+                alt="timer"
+              >
+              Tracked form Github
+            </div>
+          </div>
+          <div class="container1item lastItem" id="cont1itm4">
+            <div class="topDiv">
+              <div class="container1picture setRed">
+                <img
+                  src="./icons_exam_task1/paperplane_white.svg"
+                  alt="paperplane_white"
+                >
+              </div>
+              <div class="lableContainer">
+                <div class="lableType1">Followers</div>
+                <div class="lableType2">+245</div>
+              </div>
+            </div>
+            <div class="bottomDiv">
+              <img
+                src="./icons_exam_task1/time.png"
+                class="smallPicture"
+                alt="alert"
+              >
+              Just updated
+            </div>
+          </div>
+        </div>
+        <div id="container2">
+          <div class="container2item" id="cont2itm1">
+            <div class="columnDiv">
+              <div class="container2picture setGreen">
+                <img
+                  src="./icons_exam_task1/graphics.svg"
+                  class="diagramPicture"
+                  alt="graphics1"
+                >
+              </div>
+              <div>
+                <div class="lableType3">Daily Sales</div>
+              </div>
+              <div class="lableType4">53% increase in today sales</div>
+              <div class="bottomDiv">
+                <img
+                  src="./icons_exam_task1/time.png"
+                  class="smallPicture"
+                  alt="alert"
+                >
+                updated 4 minutes ago
+              </div>
+            </div>
+          </div>
+          <div class="container2item" id="cont2itm2">
+            <div class="columnDiv">
+              <div class="container2picture setYellow">
+                <img
+                  src="./icons_exam_task1/graphics.svg"
+                  class="diagramPicture"
+                  alt="graphics2"
+                >
+              </div>
+              <div>
+                <div class="lableType3">Email Subscriprions</div>
+              </div>
+              <div class="lableType4">Last Campaign Performance</div>
+              <div class="bottomDiv">
+                <img
+                  src="./icons_exam_task1/time.png"
+                  class="smallPicture"
+                  alt="alert"
+                >
+                campaign event 2 days ago
+              </div>
+            </div>
+          </div>
+          <div class="container2item lastItem" id="cont2itm3">
+            <div class="columnDiv">
+              <div class="container2picture setBlue">
+                <img
+                  src="./icons_exam_task1/graphics.svg"
+                  class="diagramPicture"
+                  alt="graphics3"
+                >
+              </div>
+              <div>
+                <div class="lableType3">Completed Tasks</div>
+              </div>
+              <div class="lableType4">Last Campaign Performance</div>
+              <div class="bottomDiv">
+                <img
+                  src="./icons_exam_task1/time.png"
+                  class="smallPicture"
+                  alt="alert"
+                >
+                campaign event 2 days ago
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="container3">
+          <div class="container3item" id="cont3itm1">
+            <div class="columnDiv">
+              <div class="container2picture setYellow">
+                <div class="optionLabel">Tasks:</div>
+                <div class="option">
+                  <a href="#">
+                    <img
+                      src="./icons_exam_task1/bug.svg"
+                      alt="bug"
+                      class="taskIcon"
+                    >
+                    <div>Bugs</div>
+                  </a>
+                </div>
+                <div class="option">
+                  <a href="#">
+                    <img
+                      src="./icons_exam_task1/web.svg"
+                      alt="web"
+                      class="taskIcon"
+                    >
+                    <div>Website</div>
+                  </a>
+                </div>
+                <div class="option">
+                  <a href="#">
+                    <img
+                      src="./icons_exam_task1/cloud.svg"
+                      alt="cloud"
+                      class="taskIcon"
+                    >
+                    <div>Server</div>
+                  </a>
+                </div>
+              </div>
+              <form>
+                <div class="checkboxDiv DivFirst">
+                  <input
+                    type="checkbox"
+                    name="checkbox1"
+                    class="checkboxDivItem"
+                  >
+                  <div class="checkboxDivItem">
+                    Sign contract for "What are conference organizers afraid
+                    of?"
+                  </div>
+                  <div class="checkboxDivItem last">
+                    <a href="#">
+                      <img
+                        src="./icons_exam_task1/edit.png"
+                        class="taskIcon"
+                        alt="edit1"
+                      >
+                    </a>
+                    <a href="#">
+                      <img
+                        src="./icons_exam_task1/remove.png"
+                        class="taskIcon"
+                        alt="remove1"
+                      >
+                    </a>
+                  </div>
+                </div>
+                <div class="checkboxDiv">
+                  <input
+                    type="checkbox"
+                    name="checkbox1"
+                    class="checkboxDivItem"
+                  >
+                  <div class="checkboxDivItem">
+                    Lines from Great Ukrainian Literature? Or E-mails From My
+                    Boss?
+                  </div>
+                  <div class="checkboxDivItem last">
+                    <a href="#">
+                      <img
+                        src="./icons_exam_task1/edit.png"
+                        class="taskIcon"
+                        alt="edit2"
+                      >
+                    </a>
+                    <a href="#">
+                      <img
+                        src="./icons_exam_task1/remove.png"
+                        class="taskIcon"
+                        alt="remove2"
+                      >
+                    </a>
+                  </div>
+                </div>
+                <div class="checkboxDiv">
+                  <input
+                    type="checkbox"
+                    name="checkbox1"
+                    class="checkboxDivItem"
+                  >
+                  <div class="checkboxDivItem">
+                    Sign contract for "What are project managers afraid of?"
+                  </div>
+                  <div class="checkboxDivItem last">
+                    <a href="#">
+                      <img
+                        src="./icons_exam_task1/edit.png"
+                        class="taskIcon"
+                        alt="edit3"
+                      >
+                    </a>
+                    <a href="#">
+                      <img
+                        src="./icons_exam_task1/remove.png"
+                        class="taskIcon"
+                        alt="remove3"
+                      >
+                    </a>
+                  </div>
+                </div>
+                <div class="checkboxDiv DivLast">
+                  <input
+                    type="checkbox"
+                    name="checkbox1"
+                    class="checkboxDivItem"
+                  >
+                  <div class="checkboxDivItem">
+                    Sign contract for "What are typical workers afraid of?"
+                  </div>
+                  <div class="checkboxDivItem last">
+                    <a href="#">
+                      <img
+                        src="./icons_exam_task1/edit.png"
+                        class="taskIcon"
+                        alt="edit4"
+                      >
+                    </a>
+                    <a href="#">
+                      <img
+                        src="./icons_exam_task1/remove.png"
+                        class="taskIcon"
+                        alt="remove4"
+                      >
+                    </a>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="container3item lastItem" id="cont3itm2">
+            <div id="stats" class="setBlue">
+              <div>Employees Stats</div>
+              <div class="lableType5">
+                New employees on 19th September, 2019
+              </div>
+            </div>
+            <div>
+              <table>
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Salary</th>
+                    <th>Country</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Luka Rice</td>
+                    <td>$1212.763</td>
+                    <td>Poland</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Mike Norland</td>
+                    <td>$2201.162</td>
+                    <td>England</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Hans Eidens</td>
+                    <td>$1931.717</td>
+                    <td>Germany</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>Mario Musali</td>
+                    <td>$1031.731</td>
+                    <td>Italy</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div id="footer">
+          <div class="footerItemType1">
+            <a href="#"> ABOUT </a>
+          </div>
+          <div class="footerItemType1">
+            <a href="#"> BLOG </a>
+          </div>
+          <div class="footerItemType1">
+            <a href="#"> LICENSES </a>
+          </div>
+          <div class="footerItemType2 last">2023 - made with love</div>
+        </div>
+      </div>
     </div>
-    
-</body>
+  </body>
 </html>
