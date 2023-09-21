@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <title>Flexbox в CSS3</title>
+    <style>
+        body {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            padding: 5px;
+            background-color:azure;
+        }
+        .flex-container {
+            min-width: 400px;
+            margin-left: 100px;
+            margin-right: 100px;
+            padding: 5px;
+            display: flex;
+        }
+        .color1 {
+            border: 2px solid #FFB6C1;
+            background-color: #FFB6C1;
+        }
+        .color2 {
+            border: 2px solid #AED8E6;
+            background-color: #AED8E6;
+        }
+        .color3 {
+            border: 2px solid #78c399;
+            background-color: #78c399;
+        }
+        .color4 {
+            border: 2px solid #c8d43f;
+            background-color: #c8d43f;
+        }
+        .row-reverse {
+            flex-direction: row-reverse;
+        }
+        .flex-item {
+            margin: 5px;
+            text-align: center;
+            font-size: 1.1em;
+            padding: 1.5em;
+            color: white;
+        }
+        .message1 {
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+            min-width: 200px;
+            width: 40%;
+            margin: 5px;
+            text-align: left;
+            font-size: 1.1em;
+            padding: 1.5em;
+            color: black;
+        }
+        .message2 {
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            border-bottom-left-radius: 20px;
+            min-width: 200px;
+            width: 40%;
+            margin: 5px;
+            text-align: left;
+            font-size: 1.1em;
+            padding: 1.5em;
+            color: black;
+        }
+        .person1 {
+            min-width: 130px;
+            flex-direction: row-reverse;
+            padding: 3px;
+            width: 20%;
+            display: flex;
+            margin-top: 20px;
+            margin-right: 5px;
+        }
+        .person2 {
+            min-width: 130px;
+            padding: 3px;
+            width: 20%;
+            display: flex;
+            margin-top: 20px;
+            margin-left: 5px;
+        }
+        .p1 {
+            text-align: right;
+        }
+        .p2 {
+            font-size: 0.8em; 
+            color: #969698; 
+            text-align: right; 
+            margin-top: -15px;
+        }
+        .p3 {
+            font-size: 0.8em; 
+            color: #969698; 
+            text-align: left; 
+            margin-top: -15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <div class="person1">
+            <div><img src="./icons/avatar_2.png" alt="avatar2" title="Annie Smith"></div>
+            <div> 
+                <p class="p1" >Annie Smith</p>
+                <p class="p2" >4 hours ago</p>
+            </div>
+        </div>
+        <div class="message1 color1">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+    </div>
+    <div class="flex-container row-reverse">
+        <div class="person2">
+            <div><img src="./icons/avatar_1.png" alt="avatar1" title="Jack Silverston"></div>
+            <div> 
+                <p>Jack Silverston</p>
+                <p class="p3">4 hours ago</p>
+            </div>
+        </div>
+        <div class="message2 color2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</div>
+    </div>
+   
+    <div class="flex-container">
+        <div class="person1">
+            <div><img src="./icons/avatar_3.png" alt="avatar3" title="Bob Willson"></div>
+            <div> 
+                <p class="p1" >Bob Willson</p>
+                <p class="p2" >4 hours ago</p>
+            </div>
+        </div>
+        <div class="message1 color3">Dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</div>
+    </div>
+    <div class="flex-container row-reverse">
+        <div class="person2">
+            <div><img src="./icons/avatar_4.png" alt="avatar4" title="Kate Pearse"></div>
+            <div> 
+                <p>Kate Pearse</p>
+                <p class="p3">4 hours ago</p>
+            </div>
+        </div>
+        <div class="message2 color4">Duis aute irure dolor in reprehenderit in?</div>
+    </div>
+
+    <div class="flex-container">
+        <div class="person1">
+            <div><img src="./icons/avatar_2.png" alt="avatar2" title="Annie Smith"></div>
+            <div> 
+                <p class="p1" >Annie Smith</p>
+                <p class="p2" >4 hours ago</p>
+            </div>
+        </div>
+        <div class="message1 color1">Ut enim ad minima veniam, quis nostrum exercitationem.</div>
+    </div>
+    <div class="flex-container row-reverse">
+        <div class="person2">
+            <div><img src="./icons/avatar_1.png" alt="avatar1" title="Jack Silverston"></div>
+            <div> 
+                <p>Jack Silverston</p>
+                <p class="p3">5 hours ago</p>
+            </div>
+        </div>
+        <div class="message2 color2">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut.</div>
+    </div>
+    <div class="flex-container">
+        <div class="person1">
+            <div><img src="./icons/avatar_3.png" alt="avatar3" title="Bob Willson"></div>
+            <div> 
+                <p class="p1" >Bob Willson</p>
+                <p class="p2" >5 hours ago</p>
+            </div>
+        </div>
+        <div class="message1 color3">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium?</div>
+    </div>
+    <div class="flex-container row-reverse">
+        <div class="person2">
+            <div><img src="./icons/avatar_4.png" alt="avatar4" title="Kate Pearse"></div>
+            <div> 
+                <p>Kate Pearse</p>
+                <p class="p3">6 hours ago</p>
+            </div>
+        </div>
+        <div class="message2 color4">Deserunt mollit anim id est laborum.</div>
+    </div>
+</body>
+</html>

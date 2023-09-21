@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link href="task3styles.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+  </head>
+  <body>
+    <div class="header">
+      <div class="label1">Flights - Search List</div>
+      <div class="label2">Home/Flights Search list</div>
+    </div>
+    <div class="search">
+      <form>
+        <div>
+          <input type="radio" name="radio_gender" value="male" />One Way
+          <input type="radio" name="radio_gender" value="female" />Round Trip
+        </div>
+        <div style="display: flex">
+          <div class="form1">
+            <input
+              class="inp"
+              type="text"
+              name="departurepoint"
+              placeholder="From"
+            />
+            <img class="icon" src="./icons/location.svg" alt="locationicon1" />
+          </div>
+          <div class="form1">
+            <input
+              class="inp"
+              type="text"
+              name="destination"
+              placeholder="To"
+            />
+            <img class="icon" src="./icons/location.svg" alt="locationicon2" />
+          </div>
+          <div class="form1">
+            <input
+              class="inp"
+              type="text"
+              name="DepartDate"
+              placeholder="Depart Date"
+            />
+            <img class="icon" src="./icons/calendar.svg" alt="calendaricon1" />
+          </div>
+          <div class="form1">
+            <input
+              class="inp"
+              type="text"
+              name="ReturnDate"
+              placeholder="Return Date"
+            />
+            <img class="icon" src="./icons/calendar.svg" alt="calendaricon2" />
+          </div>
+          <div class="form12">
+            <select name="Class" class="inp2">
+              <option value="0" selected>Economy Class</option>
+              <option value="1">Comfort Class</option>
+              <option value="2">Premium</option>
+              <option value="3">Business Class</option>
+            </select>
+          </div>
+          <input
+            class="searchbutton"
+            type="submit"
+            name="searchbutton"
+            value="Search"
+          />
+        </div>
+      </form>
+    </div>
+
+    <div class="main">
+      <div class="filter">
+        <form>
+          <h2>Filter</h2>
+          <h3>No. of Stops</h3>
+          <input type="checkbox" name="check_stops_1" value="Non Stop" />Non
+          Stop<br />
+          <input type="checkbox" name="check_stops_2" value="1 Stop" />1 Stop<br />
+          <input type="checkbox" name="check_stops_3" value="2+ Stops" />2+
+          Stops<br />
+          <h3>Price</h3>
+          <div class="prices">
+            <div class="price">
+              <div>Min:</div>
+              <div>
+                <input
+                  class="minmoney"
+                  type="number"
+                  name="ReturnDate"
+                  placeholder="10"
+                  step="1"
+                  min="10"
+                />$&nbsp;- &nbsp;&nbsp;
+              </div>
+            </div>
+            <div class="price">
+              <div>Max:</div>
+              <div>
+                <input
+                  class="maxmoney"
+                  type="number"
+                  name="ReturnDate"
+                  placeholder="30"
+                  step="1"
+                  min="30"
+                />$
+              </div>
+            </div>
+          </div>
+          <h3>Airlines</h3>
+          <input
+            type="checkbox"
+            name="check_airlines_1"
+            value="AsianaAirlines"
+          />Asiana Airlines<br />
+          <input
+            type="checkbox"
+            name="check_airlines_2"
+            value="AmericanAirlines"
+          />American Airlines<br />
+          <input type="checkbox" name="check_airlines_3" value="AirCanada" />Air
+          Canada<br />
+          <input type="checkbox" name="check_airlines_4" value="AirIndia" />Air
+          India<br />
+          <input
+            type="checkbox"
+            name="check_airlines_5"
+            value="JetAirways"
+          />Jet Airways<br />
+          <input
+            type="checkbox"
+            name="check_airlines_5"
+            value="Spicejet"
+          />Spicejet<br />
+        </form>
+      </div>
+
+      <div class="flightslist">
+        <h2 style="text-align: center">Dehli to Sydney</h2>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Airlines</th>
+              <th>Departure</th>
+              <th>Duration</th>
+              <th>Arrival</th>
+              <th>Price</th>
+              <td></td>
+            </tr>
+          </thead>
+          <tr>
+            <td>
+              IndiGo<br />
+              <span>6E-2489</span>
+            </td>
+            <td>
+              23:30<br />
+              <span>Dehli</span>
+            </td>
+            <td>
+              18h 55m<br />
+              <span>Non Stop</span>
+            </td>
+            <td>
+              18:15<br />
+              <span>Sydney</span>
+            </td>
+            <td>$980</td>
+            <td>
+              <input
+                class="book"
+                type="submit"
+                name="Book1"
+                value="Book"
+              /><br />
+              <span class="bluecolor">Flight Details</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              IndiGo<br />
+              <span>6E-2489</span>
+            </td>
+            <td>
+              23:30<br />
+              <span>Dehli</span>
+            </td>
+            <td>
+              18h 55m<br />
+              <span>Non Stop</span>
+            </td>
+            <td>
+              18:15<br />
+              <span>Sydney</span>
+            </td>
+            <td>$980</td>
+            <td>
+              <input
+                class="book"
+                type="submit"
+                name="Book1"
+                value="Book"
+              /><br />
+              <span class="bluecolor">Flight Details</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              IndiGo<br />
+              <span>6E-2489</span>
+            </td>
+            <td>
+              23:30<br />
+              <span>Dehli</span>
+            </td>
+            <td>
+              18h 55m<br />
+              <span>Non Stop</span>
+            </td>
+            <td>
+              18:15<br />
+              <span>Sydney</span>
+            </td>
+            <td>$980</td>
+            <td>
+              <input
+                class="book"
+                type="submit"
+                name="Book1"
+                value="Book"
+              /><br />
+              <span class="bluecolor">Flight Details</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              IndiGo<br />
+              <span>6E-2489</span>
+            </td>
+            <td>
+              23:30<br />
+              <span>Dehli</span>
+            </td>
+            <td>
+              18h 55m<br />
+              <span>Non Stop</span>
+            </td>
+            <td>
+              18:15<br />
+              <span>Sydney</span>
+            </td>
+            <td>$980</td>
+            <td>
+              <input
+                class="book"
+                type="submit"
+                name="Book1"
+                value="Book"
+              /><br />
+              <span class="bluecolor">Flight Details</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              IndiGo<br />
+              <span>6E-2489</span>
+            </td>
+            <td>
+              23:30<br />
+              <span>Dehli</span>
+            </td>
+            <td>
+              18h 55m<br />
+              <span>Non Stop</span>
+            </td>
+            <td>
+              18:15<br />
+              <span>Sydney</span>
+            </td>
+            <td>$980</td>
+            <td>
+              <input
+                class="book"
+                type="submit"
+                name="Book1"
+                value="Book"
+              /><br />
+              <span class="bluecolor">Flight Details</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              IndiGo<br />
+              <span>6E-2489</span>
+            </td>
+            <td>
+              23:30<br />
+              <span>Dehli</span>
+            </td>
+            <td>
+              18h 55m<br />
+              <span>Non Stop</span>
+            </td>
+            <td>
+              18:15<br />
+              <span>Sydney</span>
+            </td>
+            <td>$980</td>
+            <td>
+              <input
+                class="book"
+                type="submit"
+                name="Book1"
+                value="Book"
+              /><br />
+              <span class="bluecolor">Flight Details</span>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

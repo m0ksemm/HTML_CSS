@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Метки и автофокус</title>
+    <style>
+        body {
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 2em;
+            color:azure;
+            padding-left: 23%;
+            padding-top: 5%;
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: 50% 0%;
+            background-repeat: no-repeat;
+            background-image: url(img/background2.jpg);
+        }
+        input {
+            font-size: 0.75em;
+            padding: 5px;
+            margin: 5px;
+        }
+        .w1{
+            width: 311px;
+        }
+        .w2{
+            width: 653px;
+        }
+        .w3{
+            width: 197px;
+        }
+        select {
+            width: 667px;
+            font-size: 0.75em;
+            margin: 5px;
+            padding: 5px;
+        }
+        textarea {
+            width: 655px;
+            font-size: 0.75em;
+            margin: 5px;
+            resize: none;
+            padding: 5px;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        .lbl{
+            font-size: 0.65em;
+        }
+        input[type="submit"]{
+            width: 668px;
+            margin-left: 243px;
+        }
+        input[type="submit"]:hover {
+            background-color: azure;
+            border-radius: 5px;
+            
+        }
+        input[type="submit"]:active{
+            border: 1px solid transparent;
+            border: 3px solid black;
+            border-radius: 5px;
+        }
+        .main {
+            box-shadow: 0 0 50px rgba(0, 0.25, 0.5, 1);
+            width: 920px;
+            padding: 35px;
+            border: 2px solid black;
+        }
+
+    </style>
+  </head>
+  <body>
+    <div class="main">
+        <h2>
+            Contact form
+        </h2>
+        <p>
+            <span class="lbl"> Please fill in your information and we'll be sending your order. </span>
+        </p>
+        <form>
+            <table>
+                <tr>
+                    <td>
+                        <span>Name:</span>
+                    </td>
+                    <td>
+                        <input class="w1" type="text" id="Firstname" name="Firstname_" required placeholder="Firstname">
+                        <input class="w1" type="text" id="Lastname" name="Lastname_" required placeholder="Lastname">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span>Email:</span>
+                    </td>
+                    <td>
+                        <input class="w2" type="email" id="Email" name="Email_" required placeholder="Youremail@gmail.com">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span>Phone*</span>
+                    </td>
+                    <td>
+                        <input class="w3" type="tel" id="tel_part1" name="telpart1" required pattern="[0-9]{3}" placeholder="XXX">
+                        <input class="w3" type="tel" id="tel_part2" name="telpart2" required pattern="[0-9]{4}" placeholder="XXXX">
+                        <input class="w3" type="tel" id="tel_part3" name="telpart3" required pattern="[0-9]{3}" placeholder="XXX">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span>Message subject*</span>
+                    </td>
+                    <td>
+                        <select id="subject" name="list_work">
+                            <option value="0">Payment</option>
+                            <option value="1">Order</option>
+                            <option value="2">Details</option>
+                            <option value="3" selected>Other</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span>Message*</span>
+                    </td>
+                    <td>
+                        <textarea id="textarea" name="text_info" cols="20" rows="5" placeholder="Your message" required></textarea>
+                    </td>
+                </tr>
+            </table>
+            <hr>
+            <input type="submit"  value="Submit form">
+        </form>
+    </div>
+  </body>
+</html>

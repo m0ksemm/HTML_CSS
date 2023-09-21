@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        color: white;
+        font-size: 1em;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    .container {
+        padding: 30px;
+        background-color: #014242;
+        width: fit-content;
+    }
+    .path {
+        color:#767d73;
+    }
+    .person {
+        margin-top: 8dvb;
+        display: flex;
+    }
+    .big {
+        font-size: 2em;
+        font-weight: bold;
+        margin-bottom: -40px;
+    }
+    .colorgray{
+        color:#767d73;
+    }
+    img {
+        width: 60px;
+    }
+    .lbl {
+        margin-top: -15px;
+        text-wrap: nowrap;
+    }
+    .infoitem {
+        font-size: 0.8em;
+        margin-right: 20px;
+    }
+    @media (min-width:800px){
+        div.info {
+            margin-left: 20px;
+            display: flex;
+        }
+    }
+    @media (min-width:300px) and (max-width:800px){
+        .info {
+            flex-wrap: wrap-reverse;
+            margin-left: 20px;
+            display: flex;
+        }
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="path">Home / Articles /</div>
+        <div>
+            <p class="big">The Difference Between</p>
+            <p class="big">Responsive and</p>
+            <p class="big">Adaptive Design</p>
+        </div>
+        <div class="person">
+            <div>
+                <img src="./materials_hw_module_6_7/icons_hw/account.png">
+            </div>
+            <div class="info">
+                <div class="infoitem">
+                    <p class="colorgray">Author</p>
+                    <p class="lbl"> Geoff Ham</p>
+                </div>
+                <div class="infoitem">
+                    <p class="colorgray">49 Comments</p>
+                    <p class="lbl"> Go to comments</p>
+                </div>
+                <div class="infoitem">
+                    <p class="colorgray">49 Published</p>
+                    <p class="lbl"> Nov 11, 2018</p>
+                </div>
+                <div class="infoitem">
+                    <p class="colorgray">Updated</p>
+                    <p class="lbl"> Nov 17, 2018</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
