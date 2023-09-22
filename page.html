@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
       body {
@@ -25,6 +25,7 @@
         background-color: #eaeaea;
       }
       .headerB {
+        display: flex;
         padding-left: 30px;
         padding-right: 30px;
         padding-top: 20px;
@@ -312,6 +313,9 @@
       .lableType4 {
         font-size: 0.8em;
       }
+      #title {
+        margin-left: 0px;
+      }
       @media (min-width: 800px) and (max-width: 1000px) {
         #container1 {
           flex-direction: column-reverse;
@@ -328,15 +332,36 @@
         }
       }
       @media (max-width: 800px) {
-        .felxItem{
-          font-size: 0.8em;
+        #bodyItem1 {
+          position: absolute;
+          height: 100%;
+          left: -175px;
+          transition-timing-function: ease;
+          border-bottom: 3px solid #c3c3c3;
+          border-bottom-right-radius: 15px;
+        }
+        #bodyItem1:hover {
+          transition: 0.5s;
+          left: 0px;
+        }
+        #title {
+          margin-left: 40px;
         }
         #getMenu {
+          margin-left: 160px;
+          position: absolute;
           display: flex;
         }
-        #bodyItem1 {
-          display: none;
+        #getMenu:hover {
+          width: 100px;
+          position: absolute;
+          left: 0;
         }
+
+        .felxItem {
+          font-size: 0.8em;
+        }
+
         #container1 {
           flex-direction: column-reverse;
         }
@@ -356,14 +381,21 @@
   <body>
     <div id="main">
       <div id="bodyItem1">
-        <div class="headerB">Company</div>
+        <div class="headerB">
+          <div>Company</div>
+          <div id="getMenu">
+            <div class="getMenuRectangle"></div>
+            <div class="getMenuRectangle"></div>
+            <div class="getMenuRectangle"></div>
+          </div>
+        </div>
         <div id="pages">
           <div>
             <a href="./index.html" class="textColorBlack">
               <img
                 src="./icons_exam_task1/dashboard_gray.svg"
                 alt="account_icon_gray"
-              >
+              />
               <p>Dashboard</p>
             </a>
           </div>
@@ -372,13 +404,13 @@
               <img
                 src="./icons_exam_task1/account_white.svg"
                 alt="account_icon_gray"
-              >
+              />
               <p>User Profile</p>
             </a>
           </div>
           <div>
             <a href="#" class="textColorBlack">
-              <img src="./icons_exam_task1/map_gray.svg" alt="map_icon_gray">
+              <img src="./icons_exam_task1/map_gray.svg" alt="map_icon_gray" />
               <p>Maps</p>
             </a>
           </div>
@@ -387,7 +419,7 @@
               <img
                 src="./icons_exam_task1/notify_gray.svg"
                 alt="notify_icon_gray"
-              >
+              />
               <p>Notifications</p>
             </a>
           </div>
@@ -396,7 +428,7 @@
               <img
                 src="./icons_exam_task1/support_gray.svg"
                 alt="support_icon_gray"
-              >
+              />
               <p>Support</p>
             </a>
           </div>
@@ -404,12 +436,7 @@
       </div>
       <div id="bodyItem2">
         <div class="header">
-          <div id="getMenu">
-            <div class="getMenuRectangle"></div>
-            <div class="getMenuRectangle"></div>
-            <div class="getMenuRectangle"></div>
-          </div>
-          <div>User Profile</div>
+          <div id="title">User Profile</div>
         </div>
         <div id="container1">
           <div class="containerItem1">
@@ -421,46 +448,46 @@
               <div>
                 <div class="felxItem">
                   <div>Company</div>
-                  <div><input type="text" name="Company"></div>
+                  <div><input type="text" name="Company" /></div>
                 </div>
                 <div class="felxItem">
                   <div>Username</div>
-                  <div><input type="text" name="Username"></div>
+                  <div><input type="text" name="Username" /></div>
                 </div>
                 <div class="felxItem lastItem">
                   <div>Email address</div>
-                  <div><input type="email" name="Email"></div>
+                  <div><input type="email" name="Email" /></div>
                 </div>
               </div>
               <div>
                 <div class="felxItem">
                   <div>First name</div>
-                  <div><input type="text" name="First_name"></div>
+                  <div><input type="text" name="First_name" /></div>
                 </div>
                 <div class="felxItem lastItem">
                   <div>Last name</div>
-                  <div><input type="text" name="Last_name"></div>
+                  <div><input type="text" name="Last_name" /></div>
                 </div>
               </div>
 
               <div>
                 <div class="felxItem lastItem">
                   <div>Address</div>
-                  <div><input type="text" name="Address"></div>
+                  <div><input type="text" name="Address" /></div>
                 </div>
               </div>
               <div>
                 <div class="felxItem">
                   <div>City</div>
-                  <div><input type="text" name="City"></div>
+                  <div><input type="text" name="City" /></div>
                 </div>
                 <div class="felxItem">
                   <div>Country</div>
-                  <div><input type="text" name="Country"></div>
+                  <div><input type="text" name="Country" /></div>
                 </div>
                 <div class="felxItem lastItem">
                   <div>Postal code</div>
-                  <div><input type="text" name="Postal_code"></div>
+                  <div><input type="text" name="Postal_code" /></div>
                 </div>
               </div>
               <div>
@@ -480,7 +507,7 @@
                 src="./icons_exam_task1/Снимок-removebg-preview.png"
                 alt="Profile_photo"
                 class="profilePhoto"
-              >
+              />
             </div>
             <div class="lableType1">CEO/CO-FOUNDER</div>
             <div class="lableType2 allignCentre">Alec Thompson</div>

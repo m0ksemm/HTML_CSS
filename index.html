@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
       body {
@@ -25,6 +25,7 @@
         background-color: #eaeaea;
       }
       .headerB {
+        display: flex;
         padding-left: 30px;
         padding-right: 30px;
         padding-top: 20px;
@@ -330,7 +331,10 @@
         color: white;
       }
       .rows {
-        display: none;
+        display: flex;
+      }
+      #title {
+        margin-left: 0px;
       }
       @media (min-width: 800px) and (max-width: 1000px) {
         #container1 {
@@ -360,12 +364,30 @@
       }
       @media (min-width: 650px) and (max-width: 800px) {
         #bodyItem1 {
-          display: none;
+          position: absolute;
+          height: 100%;
+          left: -167px;
+          transition-timing-function: ease;
+          border-bottom: 3px solid #c3c3c3;
+          border-bottom-right-radius: 15px;
+        }
+        #bodyItem1:hover {
+          transition: 0.5s;
+          left: 0px;
+        }
+        #title {
+          margin-left: 40px;
         }
         #getMenu {
+          margin-left: 160px;
+          position: absolute;
           display: flex;
         }
-
+        #getMenu:hover {
+          width: 100px;
+          position: absolute;
+          left: 0;
+        }
         #container1 {
           flex-wrap: wrap;
         }
@@ -393,10 +415,29 @@
       }
       @media (min-width: 500px) and (max-width: 650px) {
         #bodyItem1 {
-          display: none;
+          position: absolute;
+          height: 100%;
+          left: -167px;
+          transition-timing-function: ease;
+          border-bottom: 3px solid #c3c3c3;
+          border-bottom-right-radius: 15px;
+        }
+        #bodyItem1:hover {
+          transition: 0.5s;
+          left: 0px;
+        }
+        #title {
+          margin-left: 40px;
         }
         #getMenu {
+          margin-left: 160px;
+          position: absolute;
           display: flex;
+        }
+        #getMenu:hover {
+          width: 100px;
+          position: absolute;
+          left: 0;
         }
         #container1 {
           flex-wrap: wrap;
@@ -438,10 +479,29 @@
       }
       @media (max-width: 500px) {
         #bodyItem1 {
-          display: none;
+          position: absolute;
+          height: 100%;
+          left: -167px;
+          transition-timing-function: ease;
+          border-bottom: 3px solid #c3c3c3;
+          border-bottom-right-radius: 15px;
+        }
+        #bodyItem1:hover {
+          transition: 0.5s;
+          left: 0px;
+        }
+        #title {
+          margin-left: 40px;
         }
         #getMenu {
+          margin-left: 160px;
+          position: absolute;
           display: flex;
+        }
+        #getMenu:hover {
+          width: 100px;
+          position: absolute;
+          left: 0;
         }
         #container1 {
           flex-direction: column;
@@ -495,14 +555,21 @@
   <body>
     <div id="main">
       <div id="bodyItem1">
-        <div class="headerB">Company</div>
+        <div class="headerB">
+          <div>Company</div>
+          <div id="getMenu">
+            <div class="getMenuRectangle"></div>
+            <div class="getMenuRectangle"></div>
+            <div class="getMenuRectangle"></div>
+          </div>
+        </div>
         <div id="pages">
           <div class="page chosen">
             <a href="#" class="textColorWhite">
               <img
                 src="./icons_exam_task1/dashboard_white.svg"
                 alt="account_icon_gray"
-              >
+              />
               <p>Dashboard</p>
             </a>
           </div>
@@ -511,13 +578,13 @@
               <img
                 src="./icons_exam_task1/account_gray.svg"
                 alt="account_icon_gray"
-              >
+              />
               <p>User Profile</p>
             </a>
           </div>
           <div>
             <a href="#" class="textColorBlack">
-              <img src="./icons_exam_task1/map_gray.svg" alt="map_icon_gray" >
+              <img src="./icons_exam_task1/map_gray.svg" alt="map_icon_gray" />
               <p>Maps</p>
             </a>
           </div>
@@ -526,7 +593,7 @@
               <img
                 src="./icons_exam_task1/notify_gray.svg"
                 alt="notify_icon_gray"
-              >
+              />
               <p>Notifications</p>
             </a>
           </div>
@@ -535,7 +602,7 @@
               <img
                 src="./icons_exam_task1/support_gray.svg"
                 alt="support_icon_gray"
-              >
+              />
               <p>Support</p>
             </a>
           </div>
@@ -543,18 +610,13 @@
       </div>
       <div id="bodyItem2">
         <div class="header">
-          <div id="getMenu">
-            <div class="getMenuRectangle"></div>
-            <div class="getMenuRectangle"></div>
-            <div class="getMenuRectangle"></div>
-          </div>
-          <div>Dashboard</div>
+          <div id="title">Dashboard</div>
         </div>
         <div id="container1">
           <div class="container1item" id="cont1itm1">
             <div class="topDiv">
               <div class="container1picture setGreen">
-                <img src="./icons_exam_task1/data_white.svg" alt="data_white" >
+                <img src="./icons_exam_task1/data_white.svg" alt="data_white" />
               </div>
               <div class="lableContainer">
                 <div class="lableType1">Used Space</div>
@@ -566,14 +628,14 @@
                 src="./icons_exam_task1/alert.png"
                 class="smallPicture"
                 alt="Calendar"
-              >
+              />
               Get more space...
             </div>
           </div>
           <div class="container1item" id="cont1itm2">
             <div class="topDiv">
               <div class="container1picture setYellow">
-                <img src="./icons_exam_task1/shop_white.svg" alt="shop_white" >
+                <img src="./icons_exam_task1/shop_white.svg" alt="shop_white" />
               </div>
               <div class="lableContainer">
                 <div class="lableType1">Revenue</div>
@@ -585,7 +647,7 @@
                 src="./icons_exam_task1/calendar.png"
                 class="smallPicture"
                 alt="down"
-              >
+              />
               Last 24 Hours
             </div>
           </div>
@@ -593,7 +655,7 @@
           <div class="container1item" id="cont1itm3">
             <div class="topDiv">
               <div class="container1picture setBlue">
-                <img src="./icons_exam_task1/tag_white.svg" alt="tag_white" >
+                <img src="./icons_exam_task1/tag_white.svg" alt="tag_white" />
               </div>
               <div class="lableContainer">
                 <div class="lableType1">Fixed Issues</div>
@@ -605,7 +667,7 @@
                 src="./icons_exam_task1/down.png"
                 class="smallPicture"
                 alt="timer"
-              >
+              />
               Tracked form Github
             </div>
           </div>
@@ -615,7 +677,7 @@
                 <img
                   src="./icons_exam_task1/paperplane_white.svg"
                   alt="paperplane_white"
-                >
+                />
               </div>
               <div class="lableContainer">
                 <div class="lableType1">Followers</div>
@@ -627,7 +689,7 @@
                 src="./icons_exam_task1/time.png"
                 class="smallPicture"
                 alt="alert"
-              >
+              />
               Just updated
             </div>
           </div>
@@ -640,7 +702,7 @@
                   src="./icons_exam_task1/graphics.svg"
                   class="diagramPicture"
                   alt="graphics1"
-                >
+                />
               </div>
               <div>
                 <div class="lableType3">Daily Sales</div>
@@ -651,7 +713,7 @@
                   src="./icons_exam_task1/time.png"
                   class="smallPicture"
                   alt="alert"
-                >
+                />
                 updated 4 minutes ago
               </div>
             </div>
@@ -663,7 +725,7 @@
                   src="./icons_exam_task1/graphics.svg"
                   class="diagramPicture"
                   alt="graphics2"
-                >
+                />
               </div>
               <div>
                 <div class="lableType3">Email Subscriprions</div>
@@ -674,7 +736,7 @@
                   src="./icons_exam_task1/time.png"
                   class="smallPicture"
                   alt="alert"
-                >
+                />
                 campaign event 2 days ago
               </div>
             </div>
@@ -686,7 +748,7 @@
                   src="./icons_exam_task1/graphics.svg"
                   class="diagramPicture"
                   alt="graphics3"
-                >
+                />
               </div>
               <div>
                 <div class="lableType3">Completed Tasks</div>
@@ -697,7 +759,7 @@
                   src="./icons_exam_task1/time.png"
                   class="smallPicture"
                   alt="alert"
-                >
+                />
                 campaign event 2 days ago
               </div>
             </div>
@@ -714,7 +776,7 @@
                       src="./icons_exam_task1/bug.svg"
                       alt="bug"
                       class="taskIcon"
-                    >
+                    />
                     <div>Bugs</div>
                   </a>
                 </div>
@@ -724,7 +786,7 @@
                       src="./icons_exam_task1/web.svg"
                       alt="web"
                       class="taskIcon"
-                    >
+                    />
                     <div>Website</div>
                   </a>
                 </div>
@@ -734,7 +796,7 @@
                       src="./icons_exam_task1/cloud.svg"
                       alt="cloud"
                       class="taskIcon"
-                    >
+                    />
                     <div>Server</div>
                   </a>
                 </div>
@@ -745,7 +807,7 @@
                     type="checkbox"
                     name="checkbox1"
                     class="checkboxDivItem"
-                  >
+                  />
                   <div class="checkboxDivItem">
                     Sign contract for "What are conference organizers afraid
                     of?"
@@ -756,14 +818,14 @@
                         src="./icons_exam_task1/edit.png"
                         class="taskIcon"
                         alt="edit1"
-                      >
+                      />
                     </a>
                     <a href="#">
                       <img
                         src="./icons_exam_task1/remove.png"
                         class="taskIcon"
                         alt="remove1"
-                      >
+                      />
                     </a>
                   </div>
                 </div>
@@ -772,7 +834,7 @@
                     type="checkbox"
                     name="checkbox1"
                     class="checkboxDivItem"
-                  >
+                  />
                   <div class="checkboxDivItem">
                     Lines from Great Ukrainian Literature? Or E-mails From My
                     Boss?
@@ -783,14 +845,14 @@
                         src="./icons_exam_task1/edit.png"
                         class="taskIcon"
                         alt="edit2"
-                      >
+                      />
                     </a>
                     <a href="#">
                       <img
                         src="./icons_exam_task1/remove.png"
                         class="taskIcon"
                         alt="remove2"
-                      >
+                      />
                     </a>
                   </div>
                 </div>
@@ -799,7 +861,7 @@
                     type="checkbox"
                     name="checkbox1"
                     class="checkboxDivItem"
-                  >
+                  />
                   <div class="checkboxDivItem">
                     Sign contract for "What are project managers afraid of?"
                   </div>
@@ -809,14 +871,14 @@
                         src="./icons_exam_task1/edit.png"
                         class="taskIcon"
                         alt="edit3"
-                      >
+                      />
                     </a>
                     <a href="#">
                       <img
                         src="./icons_exam_task1/remove.png"
                         class="taskIcon"
                         alt="remove3"
-                      >
+                      />
                     </a>
                   </div>
                 </div>
@@ -825,7 +887,7 @@
                     type="checkbox"
                     name="checkbox1"
                     class="checkboxDivItem"
-                  >
+                  />
                   <div class="checkboxDivItem">
                     Sign contract for "What are typical workers afraid of?"
                   </div>
@@ -835,14 +897,14 @@
                         src="./icons_exam_task1/edit.png"
                         class="taskIcon"
                         alt="edit4"
-                      >
+                      />
                     </a>
                     <a href="#">
                       <img
                         src="./icons_exam_task1/remove.png"
                         class="taskIcon"
                         alt="remove4"
-                      >
+                      />
                     </a>
                   </div>
                 </div>
